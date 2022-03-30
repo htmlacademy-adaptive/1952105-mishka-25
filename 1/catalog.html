@@ -8,14 +8,53 @@
 </head>
 
 <body>
+
   <header class="header">
 
-  </header>
+    <div class="header__inner">
+        <a href="#" class="header__logo-link">
+            <img src="" width="86" height="35" alt="Логотип интернет магазина вязаных вещей мишка.">
+        </a>
+        <butto class="header__toggle" type="button" >
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+        </button>
+        <div class="header__left-wrapper">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Каталог товаров</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Вязание на заказ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Поиск по сайту</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Корзина: <span class="nav-value">пока пуста</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header-sub">
+        <ul class="header-sub__list">
+            <li class="header-sub__item">
+                <a href="#" class="header-sub__link">Каталог товаров</a>
+            </li>
+            <li class="header-sub__item">
+                <a href="#" class="header-sub__link">Вязание на заказ</a>
+            </li>
+        </ul>
+        <span class="header-sub__delivery">Бесплатная доставка по России</span>
+    </div>
+</header>
 
   <main>
-    <div class="sub-header">
+
       <h1 class="sub-header__title">Каталог товаров</h1>
-    </div>
 
     <section class="section-catalog">
       <ul class="catalog">
@@ -58,16 +97,48 @@
   <footer class="footer">
     <h2 class="visually-hidden">Наши социальные сети.</h2>
     <ul class="social">
-      <li class="social__item"><a href="#" class="social__link">
+      <li class="social__item">
+        <a class="social__link" href="#" >
           <span class="visually-hidden">Инстаграм.</span>
-        </a></li>
-      <li class="social__item"><a href="#" class="social__link">
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#" >
           <span class="visually-hidden">Фейсбук.</span>
-        </a></li>
-      <li class="social__item"><a href="#" class="social__link">
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#" >
           <span class="visually-hidden">Твиттер.</span>
-        </a></li>
+        </a>
+      </li>
     </ul>
   </footer>
+
+  <!--Модальное при заказе-->
+
+  <div class="modal-order">
+    <h2 class="modal-order__title title">Добавить в корзину</h2>
+    <form class="form-modal" action="#" method="post" ></form>
+      <fieldset class="form-modal__group">
+        <legend сlass="form-modal__legend">Выберите размер:</legend>
+          <label class="form-modal__label">
+            s
+            <input class="form-modal__radio" type="radio" name="product-size" value="s">
+          </label>
+          <label class="form-modal__label">
+           m
+            <input class="form-modal__radio" type="radio" name="product-size" value="m">
+          </label>
+          <label class="form-modal__label">
+            l
+            <input class="form-modal__radio" type="radio" name="product-size" value="l">
+          </label>
+        </fieldset>
+        <input name="product_id" type="hidden">
+        <buttom class="form-modal__button" type="submit" >Добавить</button>
+    </form>
+  </div>
+  </div>
 </body>
 </html>

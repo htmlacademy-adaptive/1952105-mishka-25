@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+
+<body>
+
+  <header class="header">
+
+    <div class="header__inner">
+        <a href="#" class="header__logo-link">
+            <img src="" width="86" height="35" alt="Логотип интернет магазина вязаных вещей мишка.">
+        </a>
+        <butto class="header__toggle" type="button" >
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+        </button>
+        <div class="header__left-wrapper">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Каталог товаров</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Вязание на заказ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Поиск по сайту</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Корзина: <span class="nav-value">пока пуста</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header-sub">
+        <ul class="header-sub__list">
+            <li class="header-sub__item">
+                <a href="#" class="header-sub__link">Каталог товаров</a>
+            </li>
+            <li class="header-sub__item">
+                <a href="#" class="header-sub__link">Вязание на заказ</a>
+            </li>
+        </ul>
+        <span class="header-sub__delivery">Бесплатная доставка по России</span>
+    </div>
+</header>
+
+  <main>
+
+      <h1 class="sub-header__title">Каталог товаров</h1>
+
+    <section class="section-catalog">
+      <ul class="catalog">
+        <li class="catalog__card">
+          <img src="" width="260" height="195" alt="Вязанная игрушка зайчик-попрыгайчик." class="catalog-photo">
+          <h2 class="catalog__title">Зайчик-попрыгайчик</h2>
+          <span class="catalog__discription">Рост 30 см, вес 200 г</span>
+          <span class="catalog__price">1 200 руб.</span>
+          <button class="catalog__in-basket" type="button" aria-label="В корзину."></button>
+        </li>
+        <li class="catalog__card">
+          <img src="" width="260" height="195" alt="Вязанная корзинка для белья." class="catalog-photo">
+          <h2 class="catalog__title">Корзинка для белья</h2>
+          <span class="catalog__discription">Диаметр 15 см, высота 10 см</span>
+          <span class="catalog__price">690 руб.</span>
+          <button class="catalog__in-basket" aria-label="В корзину."></button>
+        </li>
+        <li class="catalog__card">
+          <img src="" width="260" height="195" alt="Вязанная большая корзинка для игрушек." class="catalog-photo">
+          <h2 class="catalog__title">Большая корзинка для игрушек</h2>
+          <span class="catalog__discription">Диаметр 30 см, высота 30 см</span>
+          <span class="catalog__price">1 500 руб.</span>
+          <button class="catalog__in-basket" aria-label="В корзину."></button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="video">
+        <h2 class="video__title title">Процесс производства</h2>
+      <div class="video__wrapper">
+        <img src="" width="260" height="160" alt="Видео процесса производства." class="video__preview">
+        <button class="video__button" type="button" aria-label="Воспроизвести видео."></button>
+      </div>
+      <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+        появляются наши товары.</p>
+      <button class="video__order-button" type="button">Сделать заказ</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h2 class="visually-hidden">Наши социальные сети.</h2>
+    <ul class="social">
+      <li class="social__item">
+        <a class="social__link" href="#" >
+          <span class="visually-hidden">Инстаграм.</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#" >
+          <span class="visually-hidden">Фейсбук.</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#" >
+          <span class="visually-hidden">Твиттер.</span>
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <!--Модальное при заказе-->
+
+  <div class="modal-order">
+    <h2 class="modal-order__title title">Добавить в корзину</h2>
+    <form class="form-modal" action="#" method="post" ></form>
+      <fieldset class="form-modal__group">
+        <legend сlass="form-modal__legend">Выберите размер:</legend>
+          <label class="form-modal__label">
+            s
+            <input class="form-modal__radio" type="radio" name="product-size" value="s">
+          </label>
+          <label class="form-modal__label">
+           m
+            <input class="form-modal__radio" type="radio" name="product-size" value="m">
+          </label>
+          <label class="form-modal__label">
+            l
+            <input class="form-modal__radio" type="radio" name="product-size" value="l">
+          </label>
+        </fieldset>
+        <input name="product_id" type="hidden">
+        <buttom class="form-modal__button" type="submit" >Добавить</button>
+    </form>
+  </div>
+  </div>
+</body>
+</html>

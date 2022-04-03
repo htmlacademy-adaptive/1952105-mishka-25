@@ -14,7 +14,7 @@
         <a href="#" class="header__logo-link">
             <img src="" width="86" height="35" alt="Логотип интернет магазина вязаных вещей мишка.">
         </a>
-        <butto class="header__toggle" type="button" >
+        <button class="header__toggle" type="button" >
             <span class="toggle-line"></span>
             <span class="toggle-line"></span>
             <span class="toggle-line"></span>
@@ -56,7 +56,7 @@
 
     <section class="intro">
       <img src="" alt="Вязаные изделия интернет магазина мишка." width="568" height="373" class="intro__img">
-      <h2 class="intro__title title">Милые штуки ручной работы для дома</h2>
+      <h2 class="intro__title title ">Милые штуки ручной работы для дома</h2>
       <ul class="intro__list">
         <li class="intro__item">
           <a href="#" class="intro__link">Предметы интерьера</a>
@@ -68,7 +68,7 @@
     </section>
 
     <section class="weekly-product">
-      <h2 class="weekly-product__title title">Вязаные корзинки</h2>
+      <h2 class="weekly-product__title title title--h2">Вязаные корзинки</h2>
       <span class="weekly-product__text">Товар недели</span>
       <p class="weekly-product__subtitle">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
       <dl class="specifications">
@@ -84,7 +84,7 @@
     </section>
 
     <section class="about">
-      <h2 class="about__title title">Коротко о нас:</h2>
+      <h2 class="about__title title title--h2">Коротко о нас:</h2>
       <ul class="about__list">
         <li class="about__item">Экологически чистые материалы</li>
         <li class="about__item">Скандинавский стиль по российской цене</li>
@@ -96,9 +96,9 @@
     </section>
 
     <section class="reviews">
+      <h2 class="visually-hidden">Что пишут о нас?</h2>
       <ul class="reviews__list">
         <li class="reviews__item">
-          <figure class="reviews__figure">
             <blockqoute class="reviews__text">
             Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
             инстамамочек.
@@ -107,7 +107,6 @@
           </blockqoute>
           <span class="reviews__name">Анастасия Красильникова</span>
           <cite class="reviews__social">@misssssiskras</cite>
-          </figure>
         </li>
       </ul>
       <div class="reviews__button-wrapper">
@@ -118,7 +117,7 @@
     </section>
 
     <section class="contacts">
-      <h2 class="contacts__title title">Контакты</h2>
+      <h2 class="contacts__title title title--h2">Контакты</h2>
       <address class="contacts__address">
         <div class="contacts__wrapper">
           <span class="contacts__name">email:</span>
@@ -159,8 +158,8 @@
   <!--Модальное при заказе-->
 
   <div class="modal-order">
-    <h2 class="modal-order__title title">Добавить в корзину</h2>
-    <form class="form-modal" action="#" method="post" ></form>
+    <h2 class="modal-order__title title title--h2">Добавить в корзину</h2>
+    <form class="form-modal" action="#" method="post">
       <fieldset class="form-modal__group">
         <legend сlass="form-modal__legend">Выберите размер:</legend>
           <label class="form-modal__label">
@@ -177,7 +176,7 @@
           </label>
         </fieldset>
         <input name="product_id" type="hidden">
-        <buttom class="form-modal__button" type="submit" >Добавить</button>
+        <button class="form-modal__button" type="submit" >Добавить</button>
     </form>
   </div>
 </body>

@@ -14,7 +14,7 @@
         <a href="#" class="header__logo-link">
             <img src="" width="86" height="35" alt="Логотип интернет магазина вязаных вещей мишка.">
         </a>
-        <butto class="header__toggle" type="button" >
+        <button class="header__toggle" type="button" >
             <span class="toggle-line"></span>
             <span class="toggle-line"></span>
             <span class="toggle-line"></span>
@@ -53,27 +53,38 @@
 
   <main>
 
-      <h1 class="sub-header__title">Каталог товаров</h1>
-
     <section class="section-catalog">
+      <h1 class="section-catalog__title title title--h1">Каталог товаров</h1>
       <ul class="catalog">
         <li class="catalog__card">
-          <img src="" width="260" height="195" alt="Вязанная игрушка зайчик-попрыгайчик." class="catalog-photo">
-          <h2 class="catalog__title">Зайчик-попрыгайчик</h2>
+          <a href="#" class="catalog__link">
+            <img src="" width="260" height="195" alt="Вязанная игрушка зайчик-попрыгайчик." class="catalog-photo">
+          </a>
+          <a href="#" class="catalog__link">
+            <h3 class="catalog__title title title--h3">Зайчик-попрыгайчик</h3>
+          </a>
           <span class="catalog__discription">Рост 30 см, вес 200 г</span>
           <span class="catalog__price">1 200 руб.</span>
           <button class="catalog__in-basket" type="button" aria-label="В корзину."></button>
         </li>
         <li class="catalog__card">
-          <img src="" width="260" height="195" alt="Вязанная корзинка для белья." class="catalog-photo">
-          <h2 class="catalog__title">Корзинка для белья</h2>
+          <a href="#" class="catalog__link">
+            <img src="" width="260" height="195" alt="Вязанная корзинка для белья." class="catalog-photo">
+          </a>
+          <a href="#" class="catalog__link">
+            <h3 class="catalog__title title title--h3">Корзинка для белья</h3>
+          </a>
           <span class="catalog__discription">Диаметр 15 см, высота 10 см</span>
           <span class="catalog__price">690 руб.</span>
           <button class="catalog__in-basket" aria-label="В корзину."></button>
         </li>
         <li class="catalog__card">
-          <img src="" width="260" height="195" alt="Вязанная большая корзинка для игрушек." class="catalog-photo">
-          <h2 class="catalog__title">Большая корзинка для игрушек</h2>
+          <a href="#" class="catalog__link">
+            <img src="" width="260" height="195" alt="Вязанная большая корзинка для игрушек." class="catalog-photo">
+          </a>
+          <a href="#" class="catalog__link">
+            <h3 class="catalog__title title--h3">Большая корзинка для игрушек</h3>
+          </a>
           <span class="catalog__discription">Диаметр 30 см, высота 30 см</span>
           <span class="catalog__price">1 500 руб.</span>
           <button class="catalog__in-basket" aria-label="В корзину."></button>
@@ -82,14 +93,14 @@
     </section>
 
     <section class="video">
-        <h2 class="video__title title">Процесс производства</h2>
+        <h3 class="video__title title title--h3">Процесс производства</h3>
       <div class="video__wrapper">
         <img src="" width="260" height="160" alt="Видео процесса производства." class="video__preview">
         <button class="video__button" type="button" aria-label="Воспроизвести видео."></button>
       </div>
       <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
         появляются наши товары.</p>
-      <button class="video__order-button" type="button">Сделать заказ</button>
+      <a class="video__order-link" href="form.html">Сделать заказ</a>
     </section>
   </main>
 
@@ -118,26 +129,25 @@
 
   <div class="modal-order">
     <h2 class="modal-order__title title">Добавить в корзину</h2>
-    <form class="form-modal" action="#" method="post" ></form>
-      <fieldset class="form-modal__group">
+    <form class="form-modal" action="#" method="post">
         <legend сlass="form-modal__legend">Выберите размер:</legend>
-          <label class="form-modal__label">
-            s
-            <input class="form-modal__radio" type="radio" name="product-size" value="s">
-          </label>
-          <label class="form-modal__label">
-           m
-            <input class="form-modal__radio" type="radio" name="product-size" value="m">
-          </label>
-          <label class="form-modal__label">
-            l
-            <input class="form-modal__radio" type="radio" name="product-size" value="l">
-          </label>
-        </fieldset>
+          <fieldset class="form-modal-group">
+            <label class="form-modal__label">
+              s
+              <input class="form-modal__radio" type="radio" name="product-size" value="s">
+            </label>
+            <label class="form-modal__label">
+             m
+              <input class="form-modal__radio" type="radio" name="product-size" value="m">
+            </label>
+            <label class="form-modal__label">
+              l
+              <input class="form-modal__radio" type="radio" name="product-size" value="l">
+            </label>
+          </fieldset>
         <input name="product_id" type="hidden">
-        <buttom class="form-modal__button" type="submit" >Добавить</button>
+        <button class="form-modal__button" type="submit" >Добавить</button>
     </form>
-  </div>
   </div>
 </body>
 </html>

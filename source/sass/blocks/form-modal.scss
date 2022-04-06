@@ -1,0 +1,24 @@
+.form-modal__group {
+  border: none;
+}
+
+.form-modal__label {
+  border: 1px $color-text solid;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 0.941;
+  text-transform: uppercase;
+}
+
+.form-modal__radio {
+  @include input-hidden;
+}
+
+.form-modal__button {
+  background-color: $color-green;
+  border: none;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 0.941;
+  color: $color-white;
+}

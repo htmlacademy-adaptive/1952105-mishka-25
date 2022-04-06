@@ -1,0 +1,22 @@
+.reviews__list {
+  @include list-reset;
+}
+
+.reviews__text {
+  font-size: 15px;
+  line-height: 2;
+  color: $color-text;
+}
+
+.reviews__name {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.411;
+  color: $color-title;
+}
+
+.reviews__social {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.764;
+}

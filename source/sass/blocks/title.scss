@@ -1,0 +1,11 @@
+.title {
+  font-family: $main-font;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 1.111;
+    &--h2 {
+      font-size: 25px;
+      line-height: 1.2;
+      margin: 0;
+    }
+}

@@ -1,0 +1,17 @@
+.contacts__box {
+  font-style: normal;
+font-size: 14px;
+line-height: 2.142;
+color: $color-text;
+}
+
+.contacts__email {
+  color: $color-text;
+  text-decoration: none;
+  border-bottom: 1px $color-green solid;
+}
+
+.contacts__adress {
+  text-decoration: none;
+  color: $color-text;
+}

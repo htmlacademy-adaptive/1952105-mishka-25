@@ -1,0 +1,38 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  background-image: url("/img/background-mobile.jpg");
+  background-size: 320px 373px;
+  background-position: center -15%;
+  background-repeat: no-repeat;
+}
+
+.intro__title {
+  padding: 73px 0 120px;
+  text-align: center;
+}
+
+
+.intro__list {
+  @include list-reset;
+  width: 100%;
+}
+
+.intro__item:nth-child(odd) {
+  background-color: $color-green;
+  padding: 24px 160px 31px 30px;
+}
+
+.intro__item:nth-child(even) {
+  background-color: $color-dark-green;
+  padding: 24px 160px 31px 30px;
+}
+
+.intro__link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 19px;
+  line-height: 1.263;
+}

@@ -1,0 +1,30 @@
+.video {
+  border: 1px solid $color-light-grey;
+}
+
+.video__title {
+  background: url("/img/icons/video.svg") center left/32px 22px no-repeat;
+}
+
+.video__button {
+  width: 95px;
+  height: 71px;
+  background: url("/img/icons/play.svg") center/100px 76px no-repeat;
+  border: none;
+
+  &:hover {
+    transform: scale(120%, 120%);
+  }
+
+  &:active {
+    transform: scale(80%, 80%);
+    opacity: 0.5;
+  }
+}
+
+.video__description {
+  font-size: 13px;
+  line-height: 1.846;
+  color: $color-text;
+}
+

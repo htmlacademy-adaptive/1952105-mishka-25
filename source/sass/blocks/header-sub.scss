@@ -1,0 +1,15 @@
+.header-sub__list {
+  @include list-reset;
+}
+
+.header-sub__link {
+  text-decoration: none;
+  color: $color-title;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.411;
+}
+
+.header-sub__delivery {
+  display: none;
+}

@@ -1,0 +1,36 @@
+.about__list {
+  @include list-reset;
+}
+
+.about__item {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.176;
+  padding-top: 42px;
+  padding-bottom: 10px;
+
+  &--flower {
+    background: url("/img/icons/flower.svg") top left/33px 38px no-repeat;
+  }
+
+  &--price {
+    background: url("/img/icons/price.svg") top left/47px 27px no-repeat;
+  }
+
+  &--heart {
+    background: url("/img/icons/heart.svg") top left/34px 24px no-repeat;
+  }
+
+  &--ball {
+    background: url("/img/icons/ball.svg") top left/35px 24px no-repeat;
+  }
+
+  &--rocket {
+    background: url("/img/icons/rocket.svg") top left/55px 23px no-repeat;
+  }
+
+  &--gift {
+    background: url("/img/icons/gift.svg") top left/32px 32px no-repeat;
+  }
+}
+///source/img/icons/flower.svg

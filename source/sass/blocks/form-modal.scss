@@ -1,0 +1,45 @@
+
+.form-modal__group {
+  border: none;
+}
+
+.form-modal__label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 52px;
+  border: 2px rgba(68, 68, 68, 0.1) solid;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 0.941;
+  text-transform: uppercase;
+  color: $color-text;
+
+  &:hover {
+    border: 2px $color-light-grey solid;
+  }
+
+  &:active {
+    border: 2px $color-green solid;
+  }
+}
+
+.form-modal__radio {
+  @include input-hidden;
+}
+
+.form-modal__button {
+  background-color: $color-green;
+  border: none;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 0.941;
+  color: $color-white;
+  padding: 18px 68px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

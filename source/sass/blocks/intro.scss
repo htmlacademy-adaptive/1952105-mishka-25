@@ -2,18 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fafafa;
   background-image: url("/img/background-mobile.jpg");
-  background-size: cover;
-  background-position: top center;
+  background-size: 320px 373px;
+  background-position: center -15%;
   background-repeat: no-repeat;
 }
 
 .intro__title {
-  margin: 73px 0 102px 0;
+  padding: 73px 0 120px;
+  text-align: center;
 }
+
 
 .intro__list {
   @include list-reset;
+  width: 100%;
 }
 
 .intro__item:nth-child(odd) {

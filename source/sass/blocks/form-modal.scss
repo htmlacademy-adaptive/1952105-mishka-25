@@ -1,13 +1,28 @@
+
 .form-modal__group {
   border: none;
 }
 
 .form-modal__label {
-  border: 1px $color-text solid;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 52px;
+  border: 2px rgba(68, 68, 68, 0.1) solid;
   font-weight: 700;
   font-size: 17px;
   line-height: 0.941;
   text-transform: uppercase;
+  color: $color-text;
+
+  &:hover {
+    border: 2px $color-light-grey solid;
+  }
+
+  &:active {
+    border: 2px $color-green solid;
+  }
 }
 
 .form-modal__radio {
@@ -21,4 +36,10 @@
   font-size: 17px;
   line-height: 0.941;
   color: $color-white;
+  padding: 18px 68px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }

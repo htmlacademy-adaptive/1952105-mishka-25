@@ -1,0 +1,31 @@
+.product-card {
+  border: 1px solid $color-light-grey;
+}
+
+.catalog__link {
+  color: $color-title;
+  text-decoration: none;
+}
+
+.catalog__discription {
+  font-size: 13px;
+  line-height: 2.307;
+}
+
+.catalog__price {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.catalog__in-basket {
+  width: 20px;
+  height: 19px;
+  background-color: transparent;
+  border: none;
+  background-image: url("/img/icons/basket.svg");
+  background-position: center;
+  background-size: 20px 19px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}

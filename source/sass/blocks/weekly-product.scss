@@ -1,9 +1,95 @@
+
+.weekly-product {
+  padding-top: 31px;
+  padding-bottom: 36px;
+  background: url("/img/decor/zigzag-line-mob.svg") bottom center/auto 6px repeat-x;
+}
+
+.weekly-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include viewport--md {
+    grid-template-columns: 40% 60%;
+  }
+
+  @include viewport--lg {
+    grid-auto-flow: column dense;
+    grid-template-columns: min-content 1fr 1fr;
+  }
+}
+
+.weekly-product__title {
+  width: 100%;
+  grid-column: 1/-1;
+  justify-self: center;
+
+  @include viewport--md {
+    grid-column: 1/2;
+    font-size: 43px;
+    line-height: 1.162;
+  }
+
+  @include viewport--lg {
+    grid-column: 2/4;
+    grid-row: 1/1;
+    z-index: 1;
+    font-size: 53px;
+    line-height: 1.075;
+  }
+}
+
 .weekly-product__text {
   font-weight: 700;
   font-size: 17px;
   line-height: 1.176;
   color: $color-green;
   text-transform: uppercase;
+  margin-bottom: 17px;
+
+  @include viewport--md {
+    grid-column: 2/-1;
+    justify-self: end;
+    font-size: 17px;
+    line-height: 1;
+    width: 100px;
+  }
+
+  @include viewport--lg {
+    grid-column: 1/2;
+    order: -1;
+  }
+}
+
+.weekly-product__specifications {
+  width: 260px;
+  margin-bottom: 28px;
+  justify-self: center;
+
+  @include viewport--md {
+    grid-column: 1/2;
+    align-self: center;
+    max-width: 292px;
+  }
+
+  @include viewport--lg {
+    grid-column: 2/3;
+  }
+}
+
+.weekly-product__photo {
+  justify-self: center;
+  margin-bottom: 25px;
+
+  @include viewport--md {
+    grid-column: 2/-1;
+    grid-row: 2/6;
+  }
+
+  @include viewport--lg {
+    grid-column: 3/-1;
+    grid-row: 1/6;
+  }
 }
 
 .weekly-product__subtitle {
@@ -11,18 +97,17 @@
   font-size: 15px;
   line-height: 1.6;
   margin: 0;
-}
+  margin-bottom: 28px;
+  grid-column: 1/-1;
+  justify-self: center;
 
-.specifications__element {
-  color: $color-text;
-  font-size: 15px;
-  line-height: 1.333;
-}
+  @include viewport--md {
+    grid-column: 1/2;
+  }
 
-.specifications__description {
-  color: $color-text;
-  font-size: 15px;
-  line-height: 1.333;
+  @include viewport--lg {
+    grid-column: 2/3;
+  }
 }
 
 .weekly-product__price {
@@ -30,5 +115,33 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 1.411;
+  grid-column: 1/-1;
+  justify-self: center;
+  margin-bottom: 25px;
+
+  @include viewport--md {
+    grid-column: 1/2;
+  }
+
+  @include viewport--lg {
+    grid-column: 2/3;
+  }
+}
+
+.weekly-product__button {
+  padding: 16px 65px;
+  text-transform: uppercase;
+  max-width: 260px;
+  justify-self: center;
+
+  @include viewport--md {
+    grid-column: 1/2;
+    padding: 16px 26px;
+    max-width: 292px;
+  }
+
+  @include viewport--lg {
+    grid-column: 2/3;
+  }
 }
 

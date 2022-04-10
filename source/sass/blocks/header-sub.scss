@@ -1,5 +1,28 @@
+.header-sub {
+  @include viewport--md {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fafafa;
+  }
+
+  @include viewport--lg {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fafafa;
+  }
+}
+
 .header-sub__list {
   @include list-reset;
+  display: none;
+
+  @include viewport--md {
+    display: flex;
+  }
+
+  @include viewport--lg {
+    display: flex;
+  }
 }
 
 .header-sub__link {
@@ -12,4 +35,19 @@
 
 .header-sub__delivery {
   display: none;
+
+  @include viewport--md {
+    display: block;
+  }
+
+  @include viewport--lg {
+    display: block;
+  }
+}
+
+.item-hidden-desktop {
+  @include viewport--lg {
+    display: none;
+  }
+
 }

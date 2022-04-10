@@ -1,6 +1,15 @@
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .form-modal__group {
   border: none;
+}
+
+.form-modal__legend {
+  margin-bottom: 21px;
 }
 
 .form-modal__label {
@@ -15,6 +24,7 @@
   line-height: 0.941;
   text-transform: uppercase;
   color: $color-text;
+  margin-bottom: 31px;
 
   &:hover {
     border: 2px $color-light-grey solid;

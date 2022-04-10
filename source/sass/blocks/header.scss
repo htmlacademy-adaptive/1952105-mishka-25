@@ -1,14 +1,38 @@
+.header__inner {
+  display: flex;
+  justify-content: center;
+  padding: 10px 31px;
+
+  @include viewport--lg {
+    justify-content: space-between;
+  }
+}
+
+.header__left-wrapper {
+  order: -1;
+}
+
 .header__logo-link {
   text-decoration: none;
 }
 
 .header__toggle {
+  position: absolute;
+  right: 0;
   width: 20px;
   height: 14px;
   border: none;
   background-color: $color-white;
   padding: 0;
   cursor: pointer;
+
+  @include viewport--md {
+    display: none;
+  }
+
+  @include viewport--lg {
+    display: none;
+  }
 }
 
 .header__toggle-line {

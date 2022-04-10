@@ -1,5 +1,26 @@
+.about {
+  padding-top: 31px;
+  padding-bottom: 50px;
+}
+
+.about__title {
+  margin-bottom: 28px;
+}
+
 .about__list {
   @include list-reset;
+  display: flex;
+  flex-direction: column;
+
+  @include viewport--md {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include viewport--lg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .about__item {

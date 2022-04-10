@@ -1,11 +1,73 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+  background: url("/img/decor/zigzag-line-mob.svg") bottom center/auto 6px repeat-x;
+  padding-bottom: 45px;
+    @include viewport--md {
+      background-image: url("/img/background-knitted-tablet.png");
+      background-size: 350px 457px;
+      background-position: left center;
+      background-repeat: no-repeat;
+      padding-top: 68px;
+      padding-bottom: 68px;
+    }
+
+    @include viewport--lg {
+      background-image: url("/img/background-knitted-tablet.png");
+      background-size: 350px 457px;
+      background-position: left center;
+      background-repeat: no-repeat;
+      padding-top: 68px;
+      padding-bottom: 68px;
+    }
+}
+
+.reviews__container {
+  display: grid;
+  grid-template-columns: 1fr;
+
+    @include viewport--md {
+      grid-template-columns: 1fr 1fr min-content;
+    }
+
+    @include viewport--lg {
+      grid-template-columns: 1fr 1fr min-content;
+    }
+}
+
 .reviews__list {
   @include list-reset;
+  margin-bottom: 30px;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews__title {
+  grid-column: 1/-1;
+  justify-self: start;
+  margin-bottom: 14px;
+
+  @include viewport--md {
+    grid-column: 1/2;
+    order: -2;
+  }
+
+  @include viewport--lg {
+    grid-column: 1/2;
+    order: -2;
+  }
 }
 
 .reviews__text {
   font-size: 15px;
   line-height: 2;
   color: $color-text;
+  margin-bottom: 38px;
 }
 
 .reviews__name {
@@ -19,4 +81,83 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 1.764;
+}
+
+.reviews__button-wrapper {
+  display: flex;
+  margin-bottom: 38px;
+  grid-column: 1/-1;
+  justify-self: center;
+
+  @include viewport--md {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    z-index: 1;
+    align-self: end;
+  }
+
+  @include viewport--lg {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    z-index: 1;
+    align-self: end;
+  }
+}
+
+.reviews__button-previous {
+  width: 130px;
+  height: 52px;
+  border: 1px solid $color-bg-title;
+  background-color: $color-white;
+  background-image: url("/img/icons/arrow.svg");
+  background-position: center;
+  background-size: 50px 25px;
+  background-repeat: no-repeat;
+
+  @include viewport--md {
+    border: none;
+  }
+
+  @include viewport--lg {
+    border: none;
+  }
+}
+
+.reviews__button-next {
+  width: 130px;
+  height: 52px;
+  border: 1px solid $color-bg-title;
+  background-color: $color-white;
+  background-image: url("/img/icons/arrow.svg");
+  background-position: center;
+  background-size: 50px 25px;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+
+  @include viewport--md {
+    border: none;
+  }
+
+  @include viewport--lg {
+    border: none;
+  }
+}
+
+.reviews__write {
+  grid-column: 1/-1;
+  max-width: 260px;
+  justify-self: center;
+  padding: 16px 65px;
+
+  @include viewport--md {
+    padding: 16px 26px;
+    grid-column: 2/3;
+    order: -1;
+  }
+
+  @include viewport--lg {
+    padding: 16px 26px;
+    grid-column: 2/3;
+    order: -1;
+  }
 }

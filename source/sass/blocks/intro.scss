@@ -45,12 +45,6 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-
-  @include viewport--lg {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 }
 
 .intro__item {

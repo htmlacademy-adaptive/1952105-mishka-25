@@ -4,12 +4,6 @@
     justify-content: space-between;
     background-color: #fafafa;
   }
-
-  @include viewport--lg {
-    display: flex;
-    justify-content: space-between;
-    background-color: #fafafa;
-  }
 }
 
 .header-sub__list {
@@ -17,10 +11,6 @@
   display: none;
 
   @include viewport--md {
-    display: flex;
-  }
-
-  @include viewport--lg {
     display: flex;
   }
 }
@@ -37,10 +27,6 @@
   display: none;
 
   @include viewport--md {
-    display: block;
-  }
-
-  @include viewport--lg {
     display: block;
   }
 }

@@ -1,8 +1,30 @@
+.form__wrapper {
+  @include viewport--md {
+    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.form__title {
+  display: block;
+  margin-bottom: 30px;
+  @include viewport--md {
+    margin-right: 150px;
+  }
+}
+
 .fieldset {
   border: none;
   padding: 0;
   display: flex;
   flex-direction: column;
+  padding-bottom: 30px;
+
+  @include viewport--md {
+    flex-direction: row;
+    justify-content: start;
+  }
 }
 
 .legend {
@@ -19,6 +41,12 @@
     background-color: $color-green;
     display: inline-block;
   }
+
+  @include viewport--md {
+    &::after {
+      display: none
+    }
+  }
 }
 
 .input-hidden {
@@ -31,6 +59,17 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 1.058;
+  margin-bottom: 11px;
+
+  @include viewport--md {
+    font-size: 19px;
+    line-height: 0.947;
+  }
+
+  @include viewport--lg {
+    font-size: 19px;
+    line-height: 0.947;
+  }
 }
 
 // radio
@@ -41,7 +80,8 @@
   background-color: $color-white;
   border-radius: 50%;
   border: 2px $color-text solid;
-  
+  margin-right: 19px;
+
   &:hover {
     border: 2px $color-green solid;
   }
@@ -61,6 +101,7 @@
   width: 38px;
   height: 38px;
   border: 2px solid $color-text;
+  margin-right: 19px;
 
   &:hover {
     border: 2px solid $color-green;
@@ -87,6 +128,17 @@
     outline: none;
     border-bottom: 2px solid $color-green;
   }
+}
+
+.form__label-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.form__input-text {
+  min-width: 260px;
+  height: 52px;
 }
 
 .form-textarea {

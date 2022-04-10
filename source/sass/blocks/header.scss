@@ -29,10 +29,6 @@
   @include viewport--md {
     display: none;
   }
-
-  @include viewport--lg {
-    display: none;
-  }
 }
 
 .header__toggle-line {

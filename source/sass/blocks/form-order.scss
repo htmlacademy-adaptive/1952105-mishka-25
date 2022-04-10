@@ -1,3 +1,18 @@
+.form-order-container {
+  padding-top: 17px;
+  padding-bottom: 55px;
+
+  @include viewport--md {
+    padding-top: 17px;
+    padding-bottom: 55px;
+  }
+
+  @include viewport--lg {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+
 .form-order__title {
   background-color: $color-bg-title;
   padding: 73px 0 73px;
@@ -8,4 +23,15 @@
   font-size: 13px;
   line-height: 1.846;
   color: $color-text;
+  padding-bottom: 29px;
+
+  @include viewport--md {
+    padding-bottom: 81px;
+    font-size: 17px;
+    line-height: 1.764;
+  }
+
+  @include viewport--lg {
+    padding-bottom: 62px;
+  }
 }

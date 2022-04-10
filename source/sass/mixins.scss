@@ -12,13 +12,13 @@
 }
 
 @mixin viewport--md {
-  @media (min-width: $md) and (max-width: $md-max) {
+  @media (min-width: $md) {
     @content
   }
 }
 
 @mixin viewport--lg {
-  @media (min-width: $lg) and (max-width: $lg-max) {
+  @media (min-width: $lg) {
       @content
   }
 }

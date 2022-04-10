@@ -2,37 +2,22 @@
   display: flex;
   flex-direction: column;
   background: url("/img/decor/zigzag-line-mob.svg") bottom center/auto 6px repeat-x;
-  padding-bottom: 45px;
-    @include viewport--md {
-      background-image: url("/img/background-knitted-tablet.png");
-      background-size: 350px 457px;
-      background-position: left center;
-      background-repeat: no-repeat;
-      padding-top: 68px;
-      padding-bottom: 68px;
-    }
-
-    @include viewport--lg {
-      background-image: url("/img/background-knitted-tablet.png");
-      background-size: 350px 457px;
-      background-position: left center;
-      background-repeat: no-repeat;
-      padding-top: 68px;
-      padding-bottom: 68px;
-    }
+  padding-bottom: 68px;
+  }
 }
 
 .reviews__container {
   display: grid;
   grid-template-columns: 1fr;
 
-    @include viewport--md {
-      grid-template-columns: 1fr 1fr min-content;
-    }
-
-    @include viewport--lg {
-      grid-template-columns: 1fr 1fr min-content;
-    }
+  @include viewport--md {
+  grid-template-columns: 1fr 1fr min-content;
+  background-image: url("/img/background-knitted-tablet.png");
+  background-size: 350px 457px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-top: 47px;
+  padding-bottom: 42px;
 }
 
 .reviews__list {
@@ -53,11 +38,6 @@
   margin-bottom: 14px;
 
   @include viewport--md {
-    grid-column: 1/2;
-    order: -2;
-  }
-
-  @include viewport--lg {
     grid-column: 1/2;
     order: -2;
   }
@@ -95,13 +75,6 @@
     z-index: 1;
     align-self: end;
   }
-
-  @include viewport--lg {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    z-index: 1;
-    align-self: end;
-  }
 }
 
 .reviews__button-previous {
@@ -115,10 +88,6 @@
   background-repeat: no-repeat;
 
   @include viewport--md {
-    border: none;
-  }
-
-  @include viewport--lg {
     border: none;
   }
 }
@@ -137,10 +106,6 @@
   @include viewport--md {
     border: none;
   }
-
-  @include viewport--lg {
-    border: none;
-  }
 }
 
 .reviews__write {
@@ -150,12 +115,6 @@
   padding: 16px 65px;
 
   @include viewport--md {
-    padding: 16px 26px;
-    grid-column: 2/3;
-    order: -1;
-  }
-
-  @include viewport--lg {
     padding: 16px 26px;
     grid-column: 2/3;
     order: -1;

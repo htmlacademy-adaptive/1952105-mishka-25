@@ -28,4 +28,8 @@
     display: none;
   }
 
+  @include viewport--lg {
+    display: block;
+  }
+
 }

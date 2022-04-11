@@ -21,17 +21,18 @@
 
 .form-order__description {
   font-size: 13px;
-  line-height: 1.846;
+  line-height: 1.84;
   color: $color-text;
   padding-bottom: 29px;
 
   @include viewport--md {
     padding-bottom: 81px;
     font-size: 17px;
-    line-height: 1.764;
+    line-height: 1.76;
   }
 
   @include viewport--lg {
     padding-bottom: 62px;
   }
 }
+

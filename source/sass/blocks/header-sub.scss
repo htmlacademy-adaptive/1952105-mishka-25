@@ -1,8 +1,27 @@
 .header-sub {
+  &--grey {
+    @include viewport--md {
+      background-color: $color-bg-title;
+    }
+  }
+}
+
+.header-sub__container {
+  max-width: 1150px;
+  margin: 0 auto;
+  background-color:  #fafafa;
+
   @include viewport--md {
     display: flex;
     justify-content: space-between;
-    background-color: #fafafa;
+    padding-left: $padding--md;
+    padding-right: $padding--md;
+
+    &--grey {
+      @include viewport--md {
+        background-color: $color-bg-title;
+      }
+    }
   }
 }
 
@@ -20,7 +39,7 @@
   color: $color-title;
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.411;
+  line-height: 1.41;
 }
 
 .header-sub__delivery {

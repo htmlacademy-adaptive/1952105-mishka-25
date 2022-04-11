@@ -9,19 +9,19 @@
 
 .about__list {
   @include list-reset;
-  display: flex;
-  flex-direction: column;
 
   @include viewport--md {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 }
 
 .about__item {
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.176;
+  line-height: 1.17;
   padding-top: 42px;
   padding-bottom: 10px;
 

@@ -1,16 +1,16 @@
-.form__wrapper {
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+
   @include viewport--md {
-    max-width: 400px;
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-.form__title {
-  display: block;
-  margin-bottom: 30px;
+.form-type {
   @include viewport--md {
-    margin-right: 150px;
+    grid-column: 1/-1;
   }
 }
 
@@ -27,10 +27,21 @@
   }
 }
 
-.legend {
+.form__title {
+  display: block;
+  margin-bottom: 30px;
+
+  @include viewport--md {
+    display: flex;
+    margin-right: 150px;
+    grid-column: 1/-1;
+  }
+}
+
+.title-group {
   font-weight: 700;
   font-size: 17px;
-  line-height: 0.941;
+  line-height: 0.94;
   text-transform: uppercase;
   color: $color-green;
 
@@ -44,13 +55,17 @@
 
   @include viewport--md {
     &::after {
-      display: none
+      display: none;
     }
   }
 }
 
-.input-hidden {
-  @include input-hidden;
+.form__wrapper {
+  @include viewport--md {
+    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .form__label {
@@ -58,21 +73,145 @@
   align-items: center;
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.058;
+  line-height: 1.05;
   margin-bottom: 11px;
 
   @include viewport--md {
     font-size: 19px;
-    line-height: 0.947;
-  }
-
-  @include viewport--lg {
-    font-size: 19px;
-    line-height: 0.947;
+    line-height: 0.94;
   }
 }
 
-// radio
+.input-hidden {
+  @include input-hidden;
+}
+
+.form-color {
+  @include viewport--md {
+    grid-column: 1/-1;
+  }
+}
+
+.form__wrapper-checkbox {
+  display: flex;
+  flex-direction: column;
+
+  @include viewport--md {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include viewport--lg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.form__label-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  @include viewport--md {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.form__input-text {
+  border: none;
+  border-bottom: 2px solid $color-title;
+  width: 260px;
+  height: 52px;
+  margin-bottom: 10px;
+
+  &:hover {
+    border-color: $color-green;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-bottom: 2px solid $color-green;
+  }
+
+  @include viewport--md {
+    width: 501px;
+  }
+}
+
+.form-contacts {
+  @include viewport--md {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    column-gap: 95px;
+    grid-column: 1/-1;
+  }
+}
+
+.form-additionally {
+  @include viewport--md {
+    grid-column: 1/-1;
+  }
+}
+
+.form-textarea {
+  width: 260px;
+  height: 142px;
+  resize: none;
+
+  @include viewport--md {
+    width: 501px;
+  }
+
+  @include viewport--lg {
+    width: 700px;
+  }
+}
+
+.form-notifications {
+  font-size: 14px;
+  line-height: 1.14;
+  color: $color-text;
+
+  @include viewport--md {
+    grid-column: 2/3;
+    align-self: center;
+    order: 1;
+  }
+}
+
+.form__submit {
+  padding: 18px 37px;
+
+  @include viewport--md {
+    grid-column: 1/2;
+    padding: 18px 32px;
+    font-size: 17px;
+    line-height: 1.76;
+  }
+}
+
+.form__label-phone,
+.form__label-email {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 0.94;
+  text-transform: uppercase;
+  color: $color-green;
+
+  &::after {
+    content: "";
+    width: 200px;
+    height: 1px;
+    background-color: $color-green;
+    display: inline-block;
+  }
+
+  @include viewport--md {
+    &::after {
+      display: none;
+    }
+  }
+}
+//-----------------------------------------------------radio
 
 .form__radio-custom {
   width: 42px;
@@ -116,41 +255,5 @@
   background: url("/img/icons/tick.svg") center/31px 22px no-repeat;
 }
 
-.form__input-text {
-  border: none;
-  border-bottom: 2px solid $color-title;
-
-  &:hover {
-    border-color: $color-green;
-  }
-
-  &:focus-visible {
-    outline: none;
-    border-bottom: 2px solid $color-green;
-  }
-}
-
-.form__label-text {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
-.form__input-text {
-  min-width: 260px;
-  height: 52px;
-}
-
-.form-textarea {
-  width: 260px;
-  height: 142px;
-  resize: none;
-}
-
-.form-notifications {
-  font-size: 14px;
-  line-height: 1.142;
-  color: $color-text;
-}
-
+//------------------------------------------------------------------------
 

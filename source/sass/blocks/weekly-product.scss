@@ -27,7 +27,7 @@
   @include viewport--md {
     grid-column: 1/2;
     font-size: 43px;
-    line-height: 1.162;
+    line-height: 1.16
   }
 
   @include viewport--lg {
@@ -35,14 +35,14 @@
     grid-row: 1/1;
     z-index: 1;
     font-size: 53px;
-    line-height: 1.075;
+    line-height: 1.07;
   }
 }
 
 .weekly-product__text {
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.176;
+  line-height: 1.17;
   color: $color-green;
   text-transform: uppercase;
   margin-bottom: 17px;
@@ -144,4 +144,3 @@
     grid-column: 2/3;
   }
 }
-

@@ -13,7 +13,7 @@
   <header class="header">
 
     <div class="header__inner">
-        <a href="#" class="header__logo-link">
+        <a href="index.html" class="header__logo-link">
             <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет магазина вязаных вещей мишка.">
         </a>
         <button class="header__toggle" type="button">
@@ -55,13 +55,14 @@
           </nav>
         </div>
     </div>
-    <div class="header-sub">
+    <div class="header-sub header-sub--grey">
+      <div class="header-sub__container header-sub__container--grey">
         <ul class="header-sub__list">
             <li class="header-sub__item">
-                <a href="#" class="header-sub__link item-hidden-desktop">Каталог товаров</a>
+                <a href="catalog.html" class="header-sub__link item-hidden-desktop">Каталог товаров</a>
             </li>
             <li class="header-sub__item">
-                <a href="#" class="header-sub__link item-hidden-desktop">Вязание на заказ</a>
+                <a href="form.html" class="header-sub__link item-hidden-desktop">Вязание на заказ</a>
             </li>
             <li class="header-sub__item item-hidden-tablet">
               <a href="#" class="header-sub__link">Новые поступления</a>
@@ -71,6 +72,7 @@
         </li>
         </ul>
         <span class="header-sub__delivery">Бесплатная доставка по России</span>
+      </div>
     </div>
 </header>
 
@@ -84,7 +86,7 @@
       <form class="form" action="#"  method="get">
 
         <fieldset class="form-type fieldset">
-          <span class="form__title legend">Тип</span>
+          <span class="form__title title-group">Тип</span>
           <div class="form__wrapper">
           <label class="form__label">
             <input class="form__radio input-hidden " type="radio"  name="product-type" value="accessory">
@@ -100,8 +102,8 @@
         </fieldset>
 
         <fieldset class="form-color fieldset">
-          <span class="form__title legend">Цвет</span>
-          <div class="form__wrapper">
+          <span class="form__title title-group">Цвет</span>
+          <div class="form__wrapper-checkbox">
           <label class="form__label">
             <input class="form__checkbox input-hidden" type="checkbox" name="white">
             <span class="form__checkbox-custom"></span>
@@ -136,7 +138,7 @@
         </fieldset>
 
         <fieldset class="form__title fieldset">
-          <span class="form__title legend">фио</span>
+          <span class="form__title title-group">фио</span>
           <div class="form__wrapper">
           <label class="form__label-text form__label">Имя:
             <input class="form__input-text" type="text" name="user-name" placeholder="Введите ваше имя*" required>
@@ -152,15 +154,15 @@
 
         <fieldset class="form-contacts fieldset">
           <legend class="visually-hidden">Ваши контактные данные.</legend>
-          <label class="form__label legend" for="form-tel">Тел</label>
+          <label class="form__label form__label-phone" for="form-tel">Тел</label>
           <input class="form__input-text" type="tel"  id="form-tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
           <!--Написать паттерн-->
-          <label class="form__label legend" for="form-email">E-mail</label>
+          <label class="form__label form__label-email" for="form-email">E-mail</label>
           <input class="form__input-text" type="email"  id="form-email" placeholder="Ваш Email*" required>
         </fieldset>
 
         <fieldset class="form-additionally fieldset">
-          <span class="form__title legend">Доп</span>
+          <span class="form__title title-group">Доп</span>
           <label class="visually-hidden" for="form-textarea">Дополнительная информация.</label>
           <textarea class="form-textarea" name="form__info" id="form-textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>

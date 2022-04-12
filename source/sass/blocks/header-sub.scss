@@ -1,5 +1,37 @@
+.header-sub {
+  &--grey {
+    @include viewport--md {
+      background-color: $color-bg-title;
+    }
+  }
+}
+
+.header-sub__container {
+  max-width: 1150px;
+  margin: 0 auto;
+  background-color:  #fafafa;
+
+  @include viewport--md {
+    display: flex;
+    justify-content: space-between;
+    padding-left: $padding--md;
+    padding-right: $padding--md;
+
+    &--grey {
+      @include viewport--md {
+        background-color: $color-bg-title;
+      }
+    }
+  }
+}
+
 .header-sub__list {
   @include list-reset;
+  display: none;
+
+  @include viewport--md {
+    display: flex;
+  }
 }
 
 .header-sub__link {
@@ -7,9 +39,20 @@
   color: $color-title;
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.411;
+  line-height: 1.41;
 }
 
 .header-sub__delivery {
   display: none;
+
+  @include viewport--md {
+    display: block;
+  }
+}
+
+.item-hidden-desktop {
+  @include viewport--lg {
+    display: none;
+  }
+
 }

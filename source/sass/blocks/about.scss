@@ -1,11 +1,27 @@
+.about {
+  padding-top: 31px;
+  padding-bottom: 50px;
+}
+
+.about__title {
+  margin-bottom: 28px;
+}
+
 .about__list {
   @include list-reset;
+
+  @include viewport--md {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 }
 
 .about__item {
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.176;
+  line-height: 1.17;
   padding-top: 42px;
   padding-bottom: 10px;
 

@@ -1,10 +1,19 @@
-.modal-order {
-  border: 1px solid #C6C6C6;
-  box-shadow: 0px 5px 10px rgba(0, 1, 1, 0.25);
+.form-order-container {
+  padding-top: 17px;
+  padding-bottom: 55px;
+
+  @include viewport--md {
+    padding-top: 17px;
+    padding-bottom: 55px;
+  }
+
+  @include viewport--lg {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
 }
 
 .form-order__title {
-  margin: 0 auto;
   background-color: $color-bg-title;
   padding: 73px 0 73px;
   text-align: center;
@@ -12,6 +21,18 @@
 
 .form-order__description {
   font-size: 13px;
-  line-height: 1.846;
+  line-height: 1.84;
   color: $color-text;
+  padding-bottom: 29px;
+
+  @include viewport--md {
+    padding-bottom: 81px;
+    font-size: 17px;
+    line-height: 1.76;
+  }
+
+  @include viewport--lg {
+    padding-bottom: 62px;
+  }
 }
+

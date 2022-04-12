@@ -1,6 +1,11 @@
 
 .nav__list {
   @include list-reset;
+  display: none;
+
+  @include viewport--lg {
+    display: flex;
+  }
 }
 
 .nav__link {
@@ -9,4 +14,22 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 1.411;
+}
+
+.nav__list {
+  @include viewport--md {
+    display: flex;
+  }
+
+}
+
+.item-hidden-tablet {
+  @include viewport--md {
+    display: none;
+  }
+
+  @include viewport--lg {
+    display: block;
+  }
+
 }

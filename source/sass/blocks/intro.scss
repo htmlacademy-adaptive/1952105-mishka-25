@@ -1,4 +1,6 @@
 .intro {
+  max-width: 1150px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,32 +9,84 @@
   background-size: 320px 373px;
   background-position: center -15%;
   background-repeat: no-repeat;
+
+  @include viewport--md {
+    background-image: url("/img/decor/zigzag-desktop.svg"), url("/img/background-desktop.jpg");
+    background-position: bottom center, center -15%;
+    background-size: auto 24px, cover;
+    background-repeat: repeat-x, no-repeat;
+  }
+
+  @include viewport--lg {
+    background-color: #fafafa;
+    background: url("/img/background-desktop.jpg") center/ cover no-repeat;
+  }
 }
 
 .intro__title {
-  padding: 73px 0 120px;
+  width: 100%;
   text-align: center;
+  padding: 73px 30px 120px;
+
+  @include viewport--md {
+    padding: 155px 50px 372px;
+  }
+
+  @include viewport--lg {
+    padding: 157px 225px 355px;
+  }
 }
 
 
 .intro__list {
   @include list-reset;
   width: 100%;
+
+  @include viewport--md {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.intro__item {
+  padding: 24px 32px 31px 30px;
+
+  @include viewport--md {
+    padding: 25px 36px 22px 36px;
+    min-width: 334px;
+  }
+
+  @include viewport--lg {
+    padding: 25px 30px 34px 36px;
+    min-width: 525px;
+  }
 }
 
 .intro__item:nth-child(odd) {
   background-color: $color-green;
-  padding: 24px 160px 31px 30px;
 }
 
 .intro__item:nth-child(even) {
   background-color: $color-dark-green;
-  padding: 24px 160px 31px 30px;
 }
 
 .intro__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: #FFFFFF;
   text-decoration: none;
   font-size: 19px;
   line-height: 1.263;
+  font-weight: 700;
+
+  @include viewport--md {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+.intro-category {
+  width: 131px;
 }

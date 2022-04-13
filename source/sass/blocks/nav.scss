@@ -13,7 +13,7 @@
   color: $color-title;
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.411;
+  line-height: 1.41;
 }
 
 .nav__list {
@@ -21,6 +21,22 @@
     display: flex;
   }
 
+}
+
+.nav__item {
+  padding: 30px 40px;
+  @include viewport--md {
+    &--border {
+      border-left: 1px solid $color-bg-title;
+      border-right: 1px solid $color-bg-title;
+    }
+  }
+
+  @include viewport--lg {
+    &--border-right {
+      border-right: 1px solid $color-bg-title;
+    }
+  }
 }
 
 .item-hidden-tablet {

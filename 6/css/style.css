@@ -22,6 +22,8 @@ body {
 
 img {
   display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 .visually-hidden {
@@ -42,7 +44,7 @@ img {
   font-family: "Open sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/source/fonts/opensans.woff2") format("woff2");
+  src: url("../") format("woff2");
   font-display: swap;
 }
 @font-face {
@@ -92,7 +94,7 @@ img {
 }
 .title--h3 {
   font-size: 17px;
-  line-height: 1.411;
+  line-height: 1.41;
 }
 @media (min-width: 768px) {
   .title {
@@ -134,7 +136,7 @@ img {
 
 .catalog__discription {
   font-size: 13px;
-  line-height: 2.307;
+  line-height: 2.3;
 }
 
 .catalog__price {
@@ -241,14 +243,14 @@ img {
   flex-direction: column;
   align-items: center;
   background-color: #fafafa;
-  background-image: url("/img/background-mobile.jpg");
+  background-image: url("../img/background-mobile.jpg");
   background-size: 320px 373px;
   background-position: center -15%;
   background-repeat: no-repeat;
 }
 @media (min-width: 768px) {
   .intro {
-    background-image: url("/img/background-desktop.jpg");
+    background-image: url("../img/background-desktop.jpg");
     background-position: center -15%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -258,21 +260,24 @@ img {
     position: absolute;
     width: 100%;
     height: 24px;
-    background: url("/img/decor/wave.svg") center/auto 24px repeat-x;
+    background: url("../img/decor/wave.svg") center/auto 24px repeat-x;
     bottom: 0;
   }
 }
 @media (min-width: 1150px) {
   .intro {
     background-color: #fafafa;
-    background: url("/img/background-desktop.jpg") center/cover no-repeat;
+    background-image: url("../img/background-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .intro::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 34px;
-    background: url("/img/decor/wave.svg") center/auto 34px repeat-x;
+    background: url("../img/decor/wave.svg") center/auto 34px repeat-x;
     bottom: 0;
   }
 }
@@ -335,10 +340,10 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   font-size: 19px;
-  line-height: 1.263;
+  line-height: 1.26;
   font-weight: 700;
 }
 @media (min-width: 768px) {
@@ -358,6 +363,11 @@ img {
   list-style: none;
   display: none;
 }
+@media (min-width: 768px) {
+  .nav__list {
+    display: flex;
+  }
+}
 @media (min-width: 1150px) {
   .nav__list {
     display: flex;
@@ -372,12 +382,6 @@ img {
   line-height: 1.41;
 }
 
-@media (min-width: 768px) {
-  .nav__list {
-    display: flex;
-  }
-}
-
 .nav__item {
   padding: 30px 40px;
 }
@@ -388,7 +392,7 @@ img {
   }
 }
 @media (min-width: 1150px) {
-  .nav__item--border-right {
+  .nav__item--border {
     border-right: 1px solid #F1F1F1;
   }
 }
@@ -422,8 +426,6 @@ img {
     padding-left: 40px;
     padding-right: 40px;
   }
-}
-@media (min-width: 768px) and (min-width: 1150px) {
   .header-sub__container--gray {
     background-color: #F1F1F1;
   }
@@ -474,16 +476,19 @@ img {
 .weekly-product {
   padding-top: 31px;
   padding-bottom: 36px;
-  background: url("/img/decor/zigzag-line.svg") bottom center/auto 6px repeat-x;
+  background-image: url("/img/decor/zigzag-line.svg");
+  background-position: bottom center;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
 }
 @media (min-width: 768px) {
   .weekly-product {
-    background: url("/img/decor/zigzag-line.svg") bottom center/auto 17px repeat-x;
+    background-size: auto 17px;
   }
 }
 @media (min-width: 1150px) {
   .weekly-product {
-    background: url("/img/decor/zigzag-line.svg") bottom center/auto 23px repeat-x;
+    background-size: auto 23px;
   }
 }
 
@@ -608,7 +613,7 @@ img {
   color: #444444;
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.411;
+  line-height: 1.41;
   grid-column: 1/-1;
   justify-self: center;
   margin-bottom: 25px;
@@ -652,7 +657,7 @@ img {
 .specifications__element {
   color: #444444;
   font-size: 15px;
-  line-height: 1.333;
+  line-height: 1.33;
   grid-column: 1/2;
   border-bottom: 1px solid #F1F1F1;
   padding-bottom: 7px;
@@ -662,7 +667,7 @@ img {
 .specifications__description {
   color: #444444;
   font-size: 15px;
-  line-height: 1.333;
+  line-height: 1.33;
   grid-column: 2/-1;
   margin: 0;
   border-bottom: 1px solid #F1F1F1;
@@ -679,7 +684,7 @@ img {
   border: 2px solid #444444;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.111;
+  line-height: 1.11;
   color: #444444;
   text-decoration: none;
   text-transform: uppercase;
@@ -688,7 +693,7 @@ img {
 @media (min-width: 768px) {
   .button {
     font-size: 17px;
-    line-height: 1.176;
+    line-height: 1.17;
   }
 }
 
@@ -745,16 +750,19 @@ img {
   display: flex;
   flex-direction: column;
   padding-bottom: 68px;
-  background: url("/img/decor/zigzag-line.svg") bottom center/auto 6px repeat-x;
+  background-image: url("/img/decor/zigzag-line.svg");
+  background-position: bottom center;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
 }
 @media (min-width: 768px) {
   .reviews {
-    background: url("/img/decor/zigzag-line.svg") bottom center/auto 17px repeat-x;
+    background-size: auto 17px;
   }
 }
 @media (min-width: 1150px) {
   .reviews {
-    background: url("/img/decor/zigzag-line.svg") bottom center/auto 23px repeat-x;
+    background-size: auto 23px;
   }
 }
 
@@ -810,14 +818,14 @@ img {
 .reviews__name {
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.411;
+  line-height: 1.41;
   color: #000000;
 }
 
 .reviews__social {
   font-weight: 400;
   font-size: 17px;
-  line-height: 1.764;
+  line-height: 1.76;
 }
 
 .reviews__button-wrapper {
@@ -999,7 +1007,7 @@ img {
 .footer__developed {
   font-weight: 700;
   font-size: 27px;
-  line-height: 1.111;
+  line-height: 1.11;
 }
 
 .social {
@@ -1017,7 +1025,7 @@ img {
   width: 100%;
   max-width: 565px;
   margin: 0 auto;
-  border: 1px solid #C6C6C6;
+  border: 1px solid #F1F1F1;
   box-shadow: 0px 5px 10px rgba(0, 1, 1, 0.25);
   padding-top: 28px;
   padding-bottom: 46px;
@@ -1078,7 +1086,7 @@ img {
   border: none;
   font-weight: 700;
   font-size: 17px;
-  line-height: 0.941;
+  line-height: 0.94;
   color: #ffffff;
   padding: 18px 68px;
   cursor: pointer;

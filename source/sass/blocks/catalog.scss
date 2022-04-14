@@ -91,6 +91,8 @@
   }
 
   @include viewport--md {
+    margin-bottom: 197px;
+
     &::after {
       content: "";
       position: absolute;
@@ -101,8 +103,6 @@
       margin: 0 auto;
       top: 172px;
     }
-
-    margin-bottom: 197px;
   }
 
   @include viewport--lg {

@@ -2,14 +2,17 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 68px;
-  background: url("/img/decor/zigzag-line.svg") bottom center/auto 6px repeat-x;
+  background-image: url("/img/decor/zigzag-line.svg");
+  background-position: bottom center;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
 
   @include viewport--md {
-    background: url("/img/decor/zigzag-line.svg") bottom center/auto 17px repeat-x;
+    background-size: auto 17px;
   }
 
   @include viewport--lg {
-    background: url("/img/decor/zigzag-line.svg") bottom center/auto 23px repeat-x;
+    background-size: auto 23px;
   }
 }
 
@@ -19,13 +22,13 @@
   grid-template-columns: 1fr;
 
   @include viewport--md {
-  grid-template-columns: 1fr 1fr min-content;
-  background-image: url("/img/background-knitted-tablet.png");
-  background-size: 350px 457px;
-  background-position: left center;
-  background-repeat: no-repeat;
-  padding-top: 47px;
-  padding-bottom: 42px;
+    grid-template-columns: 1fr 1fr min-content;
+    background-image: url("/img/background-knitted-tablet.png");
+    background-size: 350px 457px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-top: 47px;
+    padding-bottom: 42px;
   }
 }
 
@@ -62,14 +65,14 @@
 .reviews__name {
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.411;
+  line-height: 1.41;
   color: $color-title;
 }
 
 .reviews__social {
   font-weight: 400;
   font-size: 17px;
-  line-height: 1.764;
+  line-height: 1.76;
 }
 
 .reviews__button-wrapper {

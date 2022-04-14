@@ -9,7 +9,7 @@
 .header-sub__container {
   max-width: 1150px;
   margin: 0 auto;
-  background-color:  #fafafa;
+  background-color: #fafafa;
 
   @include viewport--md {
     display: flex;
@@ -18,9 +18,7 @@
     padding-right: $padding--md;
 
     &--gray {
-      @include viewport--lg {
-        background-color: $color-bg-title;
-      }
+      background-color: $color-bg-title;
     }
   }
 }

@@ -3,6 +3,10 @@
   @include list-reset;
   display: none;
 
+  @include viewport--md {
+    display: flex;
+  }
+
   @include viewport--lg {
     display: flex;
   }
@@ -16,24 +20,16 @@
   line-height: 1.41;
 }
 
-.nav__list {
-  @include viewport--md {
-    display: flex;
-  }
-
-}
-
 .nav__item {
   padding: 30px 40px;
-  @include viewport--md {
-    &--border {
+
+  &--border {
+    @include viewport--md {
       border-left: 1px solid $color-bg-title;
       border-right: 1px solid $color-bg-title;
     }
-  }
 
-  @include viewport--lg {
-    &--border-right {
+    @include viewport--lg {
       border-right: 1px solid $color-bg-title;
     }
   }

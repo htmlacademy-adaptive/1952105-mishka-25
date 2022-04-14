@@ -9,7 +9,7 @@
   background-color: $color-bg-title;
 
   @include viewport--md {
-    background-image: url("/img/decor/zigzag-desktop.svg");
+    background-image: url("../img/decor/zigzag-desktop.svg");
     background-size: auto 24px;
     background-position: bottom center;
     background-repeat: repeat-x;

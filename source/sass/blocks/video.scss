@@ -22,7 +22,10 @@
 }
 
 .video__title {
-  background: url("/img/icons/video.svg") center left 25px/32px 22px no-repeat;
+  background-image: url("../img/icons/video.svg");
+  background-position: left 25px;
+  background-size: 32px 22px;
+  background-repeat: no-repeat;
   margin-bottom: 26px;
   padding-left: 100px;
   justify-self: end;
@@ -57,7 +60,10 @@
   transform: translate(-50%, -50%);
   width: 95px;
   height: 71px;
-  background: url("/img/icons/play.svg") center/100px 76px no-repeat;
+  background-image: url("../img/icons/play.svg");
+  background-position: center;
+  background-size: 100px 76px;
+  background-repeat: no-repeat;
   border: none;
 
   &:hover {

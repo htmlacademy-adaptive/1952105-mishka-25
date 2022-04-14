@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 68px;
-  background-image: url("/img/decor/zigzag-line.svg");
+  background-image: url("../img/decor/zigzag-line.svg");
   background-position: bottom center;
   background-size: auto 6px;
   background-repeat: repeat-x;
@@ -23,7 +23,7 @@
 
   @include viewport--md {
     grid-template-columns: 1fr 1fr min-content;
-    background-image: url("/img/background-knitted-tablet.png");
+    background-image: url("../img/background-knitted-tablet.png");
     background-size: 350px 457px;
     background-position: left center;
     background-repeat: no-repeat;
@@ -94,7 +94,7 @@
   height: 52px;
   border: 1px solid $color-bg-title;
   background-color: $color-white;
-  background-image: url("/img/icons/arrow.svg");
+  background-image: url("../img/icons/arrow.svg");
   background-position: center;
   background-size: 50px 25px;
   background-repeat: no-repeat;
@@ -109,7 +109,7 @@
   height: 52px;
   border: 1px solid $color-bg-title;
   background-color: $color-white;
-  background-image: url("/img/icons/arrow.svg");
+  background-image: url("../img/icons/arrow.svg");
   background-position: center;
   background-size: 50px 25px;
   background-repeat: no-repeat;

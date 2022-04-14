@@ -44,14 +44,14 @@ img {
   font-family: "Open sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../") format("woff2");
+  src: url("../fonts/opensans.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: "Open sans bold";
   font-style: normal;
   font-weight: 700;
-  src: url("/source/fonts/opensansbold.woff2") format("woff2");
+  src: url("../fonts/opensansbold.woff2") format("woff2");
   font-display: swap;
 }
 .container {
@@ -84,7 +84,7 @@ img {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 27px;
-  line-height: 1.111;
+  line-height: 1.11;
   margin: 0;
 }
 .title--h2 {
@@ -150,7 +150,7 @@ img {
   height: 19px;
   background-color: transparent;
   border: none;
-  background-image: url("/img/icons/basket.svg");
+  background-image: url("../img/icons/basket.svg");
   background-position: center;
   background-size: 20px 19px;
   background-repeat: no-repeat;
@@ -476,7 +476,7 @@ img {
 .weekly-product {
   padding-top: 31px;
   padding-bottom: 36px;
-  background-image: url("/img/decor/zigzag-line.svg");
+  background-image: url("../img/decor/zigzag-line.svg");
   background-position: bottom center;
   background-size: auto 6px;
   background-repeat: repeat-x;
@@ -728,29 +728,29 @@ img {
   padding-bottom: 10px;
 }
 .about__item--flower {
-  background: url("/img/icons/flower.svg") top left/33px 38px no-repeat;
+  background: url("../img/icons/flower.svg") top left/33px 38px no-repeat;
 }
 .about__item--price {
-  background: url("/img/icons/price.svg") top left/47px 27px no-repeat;
+  background: url("../img/icons/price.svg") top left/47px 27px no-repeat;
 }
 .about__item--heart {
-  background: url("/img/icons/heart.svg") top left/34px 24px no-repeat;
+  background: url("../img/icons/heart.svg") top left/34px 24px no-repeat;
 }
 .about__item--ball {
-  background: url("/img/icons/ball.svg") top left/35px 24px no-repeat;
+  background: url("../img/icons/ball.svg") top left/35px 24px no-repeat;
 }
 .about__item--rocket {
-  background: url("/img/icons/rocket.svg") top left/55px 23px no-repeat;
+  background: url("../img/icons/rocket.svg") top left/55px 23px no-repeat;
 }
 .about__item--gift {
-  background: url("/img/icons/gift.svg") top left/32px 32px no-repeat;
+  background: url("../img/icons/gift.svg") top left/32px 32px no-repeat;
 }
 
 .reviews {
   display: flex;
   flex-direction: column;
   padding-bottom: 68px;
-  background-image: url("/img/decor/zigzag-line.svg");
+  background-image: url("../img/decor/zigzag-line.svg");
   background-position: bottom center;
   background-size: auto 6px;
   background-repeat: repeat-x;
@@ -773,7 +773,7 @@ img {
 @media (min-width: 768px) {
   .reviews__container {
     grid-template-columns: 1fr 1fr min-content;
-    background-image: url("/img/background-knitted-tablet.png");
+    background-image: url("../img/background-knitted-tablet.png");
     background-size: 350px 457px;
     background-position: left center;
     background-repeat: no-repeat;
@@ -848,7 +848,7 @@ img {
   height: 52px;
   border: 1px solid #F1F1F1;
   background-color: #ffffff;
-  background-image: url("/img/icons/arrow.svg");
+  background-image: url("../img/icons/arrow.svg");
   background-position: center;
   background-size: 50px 25px;
   background-repeat: no-repeat;
@@ -864,7 +864,7 @@ img {
   height: 52px;
   border: 1px solid #F1F1F1;
   background-color: #ffffff;
-  background-image: url("/img/icons/arrow.svg");
+  background-image: url("../img/icons/arrow.svg");
   background-position: center;
   background-size: 50px 25px;
   background-repeat: no-repeat;
@@ -1026,7 +1026,7 @@ img {
   max-width: 565px;
   margin: 0 auto;
   border: 1px solid #F1F1F1;
-  box-shadow: 0px 5px 10px rgba(0, 1, 1, 0.25);
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
   padding-top: 28px;
   padding-bottom: 46px;
 }
@@ -1063,7 +1063,7 @@ img {
   border: 2px rgba(68, 68, 68, 0.1) solid;
   font-weight: 700;
   font-size: 17px;
-  line-height: 0.941;
+  line-height: 0.94;
   text-transform: uppercase;
   color: #444444;
   margin-bottom: 31px;
@@ -1408,7 +1408,7 @@ img {
 }
 @media (min-width: 768px) {
   .section-catalog__wrapper {
-    background-image: url("/img/decor/zigzag-desktop.svg");
+    background-image: url("../img/decor/zigzag-desktop.svg");
     background-size: auto 24px;
     background-position: bottom center;
     background-repeat: repeat-x;
@@ -1589,7 +1589,10 @@ img {
 }
 
 .video__title {
-  background: url("/img/icons/video.svg") center left 25px/32px 22px no-repeat;
+  background-image: url("../img/icons/video.svg");
+  background-position: left 25px;
+  background-size: 32px 22px;
+  background-repeat: no-repeat;
   margin-bottom: 26px;
   padding-left: 100px;
   justify-self: end;
@@ -1628,7 +1631,10 @@ img {
   transform: translate(-50%, -50%);
   width: 95px;
   height: 71px;
-  background: url("/img/icons/play.svg") center/100px 76px no-repeat;
+  background-image: url("../img/icons/play.svg");
+  background-position: center;
+  background-size: 100px 76px;
+  background-repeat: no-repeat;
   border: none;
 }
 .video__button:hover {

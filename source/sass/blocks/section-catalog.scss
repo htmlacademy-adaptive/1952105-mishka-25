@@ -1,5 +1,30 @@
-.section-catalog__title {
+.section-catalog {
+  padding-bottom: 30px;
+}
+
+.section-catalog__wrapper {
+  padding-top: 73px;
+  padding-bottom: 73px;
+  margin-bottom: 30px;
   background-color: $color-bg-title;
-  padding: 73px 0 73px;
+
+  @include viewport--md {
+    background-image: url("../img/decor/zigzag-desktop.svg");
+    background-size: auto 24px;
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    padding-top: 100px;
+    padding-bottom: 75px;
+  }
+
+  @include viewport--lg {
+    background-size: auto 34px;
+    padding-top: 105px;
+    padding-bottom: 95px;
+  }
+}
+
+.section-catalog__title {
   text-align: center;
 }
+

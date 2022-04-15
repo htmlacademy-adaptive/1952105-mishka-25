@@ -1,30 +1,109 @@
 .video {
-  border: 1px solid $color-light-grey;
+  padding-bottom: 55px;
+}
+
+.video__container {
+  border: 1px solid $color-bg-title;
+  width: 260px;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 21px;
+  margin: 0 auto;
+
+  @include viewport--md {
+    width: 668px;
+    justify-items: center;
+  }
+
+  @include viewport--lg {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .video__title {
-  background: url("/img/icons/video.svg") center left/32px 22px no-repeat;
+  background-image: url("../img/icons/video.svg");
+  background-position: left 25px;
+  background-size: 32px 22px;
+  background-repeat: no-repeat;
+  margin-bottom: 26px;
+  padding-left: 100px;
+  justify-self: end;
+
+  @include viewport--md {
+    justify-self: start;
+  }
+
+  @include viewport--lg {
+    grid-column: 2/3;
+  }
+}
+
+.video__wrapper {
+  position: relative;
+  margin-bottom: 35px;
+
+  @include viewport--md {
+    order: -1;
+  }
+
+  @include viewport--lg {
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }
 }
 
 .video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 95px;
   height: 71px;
-  background: url("/img/icons/play.svg") center/100px 76px no-repeat;
+  background-image: url("../img/icons/play.svg");
+  background-position: center;
+  background-size: 100px 76px;
+  background-repeat: no-repeat;
   border: none;
 
   &:hover {
-    transform: scale(120%, 120%);
+    transform: translate(-50%, -50%) scale(1.2);
   }
 
   &:active {
-    transform: scale(80%, 80%);
+    transform: translate(-50%, -50%) scale(0.8);
     opacity: 0.5;
   }
 }
 
 .video__description {
   font-size: 13px;
-  line-height: 1.846;
+  line-height: 1.84;
   color: $color-text;
+  margin-bottom: 41px;
+  margin-left: 30px;
+
+  @include viewport--md {
+    margin-left: 40px;
+  }
+
+  @include viewport--lg {
+    margin-left: 80px;
+    grid-column: 2/3;
+  }
+}
+
+.video__order-link {
+  justify-self: center;
+  margin-bottom: 33px;
+  padding: 18px 0 18px;
+
+  @include viewport--md {
+    width: 170px;
+  }
+
+  @include viewport--lg {
+    grid-column: 2/3;
+  }
 }
 

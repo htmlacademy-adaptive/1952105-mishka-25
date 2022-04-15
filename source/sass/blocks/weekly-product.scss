@@ -2,7 +2,18 @@
 .weekly-product {
   padding-top: 31px;
   padding-bottom: 36px;
-  background: url("/img/decor/zigzag-line-mob.svg") bottom center/auto 6px repeat-x;
+  background-image: url("../img/decor/zigzag-line.svg");
+  background-position: bottom center;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+
+  @include viewport--md {
+    background-size: auto 17px;
+  }
+
+  @include viewport--lg {
+    background-size: auto 23px;
+  }
 }
 
 .weekly-wrapper {
@@ -27,7 +38,7 @@
   @include viewport--md {
     grid-column: 1/2;
     font-size: 43px;
-    line-height: 1.16
+    line-height: 1.16;
   }
 
   @include viewport--lg {
@@ -114,7 +125,7 @@
   color: $color-text;
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.411;
+  line-height: 1.41;
   grid-column: 1/-1;
   justify-self: center;
   margin-bottom: 25px;

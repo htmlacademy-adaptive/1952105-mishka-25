@@ -1,12 +1,24 @@
 .header__inner {
+  height: 79px;
+  position: relative;
   max-width: 1150px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  padding: 10px 31px;
+  align-items: center;
+
+  @include viewport--md {
+    height: 89px;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 1px solid $color-bg-title;
+  }
 
   @include viewport--lg {
     justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -20,7 +32,9 @@
 
 .header__toggle {
   position: absolute;
-  right: 0;
+  right: 33px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 20px;
   height: 14px;
   border: none;

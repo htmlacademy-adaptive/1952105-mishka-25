@@ -7,7 +7,7 @@
   border: 2px solid #444444;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.111;
+  line-height: 1.11;
   color: $color-text;
   text-decoration: none;
   text-transform: uppercase;
@@ -15,6 +15,6 @@
 
   @include viewport--md {
     font-size: 17px;
-    line-height: 1.176;
+    line-height: 1.17;
   }
 }

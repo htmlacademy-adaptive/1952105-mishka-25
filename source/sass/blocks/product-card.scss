@@ -1,5 +1,5 @@
 .product-card {
-  border: 1px solid $color-light-grey;
+  border: 1px solid $color-bg-title;
 }
 
 .catalog__link {
@@ -9,7 +9,7 @@
 
 .catalog__discription {
   font-size: 13px;
-  line-height: 2.307;
+  line-height: 2.3;
 }
 
 .catalog__price {
@@ -23,7 +23,7 @@
   height: 19px;
   background-color: transparent;
   border: none;
-  background-image: url("/img/icons/basket.svg");
+  background-image: url("../img/icons/basket.svg");
   background-position: center;
   background-size: 20px 19px;
   background-repeat: no-repeat;

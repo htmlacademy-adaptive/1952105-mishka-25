@@ -1,3 +1,126 @@
 .catalog {
   @include list-reset;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+  margin: 0 auto;
+
+  @include viewport--md {
+    row-gap: 54px;
+  }
+
+  @include viewport--lg {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 52px;
+    row-gap: 57px;
+  }
+}
+
+.catalog__card {
+  width: 260px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include viewport--md {
+    width: 670px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include viewport--lg {
+    width: 316px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.catalog__link-photo {
+  grid-column: 1/-1;
+  justify-items: center;
+
+  @include viewport--md {
+    grid-column: 1/2;
+  }
+
+  @include viewport--lg {
+    grid-column: 1/-1;
+  }
+}
+
+.catalog__card-wrapper {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  padding: 27px 21px 26px;
+
+  @include viewport--md {
+    grid-column: 2/3;
+    padding-left: 34px;
+    padding-right: 39px;
+  }
+
+  @include viewport--lg {
+    grid-column: 1/-1;
+    padding-left: 34px;
+    padding-right: 39px;
+  }
+}
+
+.catalog__link {
+  grid-column: 1/-1;
+  margin-bottom: 6px;
+}
+
+.catalog__box {
+  grid-column: 1/-1;
+}
+
+.catalog__discription {
+  grid-column: 1/-1;
+  position: relative;
+  margin-bottom: 41px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 204px;
+    height: 1px;
+    background-color: $color-bg-title;
+    display: block;
+    margin: 0 auto;
+    top: 43px;
+  }
+
+  @include viewport--md {
+    margin-bottom: 197px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 268px;
+      height: 1px;
+      background-color: $color-bg-title;
+      display: block;
+      margin: 0 auto;
+      top: 172px;
+    }
+  }
+
+  @include viewport--lg {
+    &::after {
+      content: "";
+      width: 258px;
+      height: 1px;
+      background-color: $color-bg-title;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.catalog__price {
+  grid-column: 1/2;
+}
+
+.catalog__in-basket {
+  grid-column: 2/3;
 }

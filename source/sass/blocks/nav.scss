@@ -3,6 +3,10 @@
   @include list-reset;
   display: none;
 
+  @include viewport--md {
+    display: flex;
+  }
+
   @include viewport--lg {
     display: flex;
   }
@@ -13,14 +17,22 @@
   color: $color-title;
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.411;
+  line-height: 1.41;
 }
 
-.nav__list {
-  @include viewport--md {
-    display: flex;
-  }
+.nav__item {
+  padding: 30px 40px;
 
+  &--border {
+    @include viewport--md {
+      border-left: 1px solid $color-bg-title;
+      border-right: 1px solid $color-bg-title;
+    }
+
+    @include viewport--lg {
+      border-right: 1px solid $color-bg-title;
+    }
+  }
 }
 
 .item-hidden-tablet {

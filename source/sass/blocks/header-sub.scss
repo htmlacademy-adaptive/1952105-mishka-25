@@ -1,5 +1,5 @@
 .header-sub {
-  &--grey {
+  &--gray {
     @include viewport--md {
       background-color: $color-bg-title;
     }
@@ -9,7 +9,7 @@
 .header-sub__container {
   max-width: 1150px;
   margin: 0 auto;
-  background-color:  #fafafa;
+  background-color: #fafafa;
 
   @include viewport--md {
     display: flex;
@@ -17,10 +17,8 @@
     padding-left: $padding--md;
     padding-right: $padding--md;
 
-    &--grey {
-      @include viewport--md {
-        background-color: $color-bg-title;
-      }
+    &--gray {
+      background-color: $color-bg-title;
     }
   }
 }
@@ -34,12 +32,19 @@
   }
 }
 
+.header-sub__item:not(:last-child) {
+  @include viewport--md {
+    margin-right: 25px;
+  }
+}
+
 .header-sub__link {
   text-decoration: none;
   color: $color-title;
   font-weight: 700;
   font-size: 17px;
   line-height: 1.41;
+  padding: 10px 6px;
 }
 
 .header-sub__delivery {
@@ -54,5 +59,4 @@
   @include viewport--lg {
     display: none;
   }
-
 }

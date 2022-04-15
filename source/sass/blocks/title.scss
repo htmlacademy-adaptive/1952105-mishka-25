@@ -2,7 +2,7 @@
   font-family: $main-font;
   font-weight: 700;
   font-size: 27px;
-  line-height: 1.111;
+  line-height: 1.11;
   margin: 0;
 
   &--h2 {
@@ -13,16 +13,31 @@
 
   &--h3 {
     font-size: 17px;
-    line-height: 1.411;
+    line-height: 1.41;
   }
 
   @include viewport--md {
     font-size: 43px;
-    line-height: 1.162;
+    line-height: 1.16;
 
     &--h2 {
       font-size: 43px;
-      line-height: 1.162;
+      line-height: 1.16;
+    }
+
+    &--h3 {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+  }
+
+  @include viewport--lg {
+    font-size: 53px;
+    line-height: 1.07;
+
+    &--h2 {
+      font-size: 53px;
+      line-height: 1.07;
     }
 
     &--h3 {

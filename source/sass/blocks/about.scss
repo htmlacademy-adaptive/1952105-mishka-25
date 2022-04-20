@@ -1,10 +1,19 @@
 .about {
-  padding-top: 31px;
-  padding-bottom: 50px;
+  padding-top: 37px;
+  padding-bottom: 21px;
+  
+  @include viewport--md {
+    padding-top: 50px;
+    padding-bottom: 48px;
+  }
 }
 
 .about__title {
   margin-bottom: 28px;
+
+  @include viewport--md {
+    margin-bottom: 45px;
+  }
 }
 
 .about__list {
@@ -15,6 +24,7 @@
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: column;
     grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 28px;
   }
 }
 
@@ -22,31 +32,36 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 1.17;
-  padding-top: 42px;
-  padding-bottom: 10px;
+  padding-top: 55px;
+  padding-bottom: 30px;
 
   &--flower {
-    background: url("../img/icons/flower.svg") top left/33px 38px no-repeat;
+    background: url("../img/icons/flower.svg") top left 8px/33px 38px no-repeat;
   }
 
   &--price {
-    background: url("../img/icons/price.svg") top left/47px 27px no-repeat;
+    background: url("../img/icons/price.svg") top left /47px 27px no-repeat;
   }
 
   &--heart {
-    background: url("../img/icons/heart.svg") top left/34px 24px no-repeat;
+    background: url("../img/icons/heart.svg") top 2px left 8px/34px 27px no-repeat;
   }
 
   &--ball {
-    background: url("../img/icons/ball.svg") top left/35px 24px no-repeat;
+    background: url("../img/icons/ball.svg") top left/35px 34px no-repeat;
   }
 
   &--rocket {
-    background: url("../img/icons/rocket.svg") top left/55px 23px no-repeat;
+    background: url("../img/icons/rocket.svg") top -3px left -8px/55px 23px no-repeat;
   }
 
   &--gift {
     background: url("../img/icons/gift.svg") top left/32px 32px no-repeat;
+  }
+
+  @include viewport--md {
+    font-size: 20px;
+    line-height: 1.1;
   }
 }
 ///source/img/icons/flower.svg

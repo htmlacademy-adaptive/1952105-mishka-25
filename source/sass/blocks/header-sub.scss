@@ -1,4 +1,6 @@
 .header-sub {
+  margin: 0 auto;
+  max-width: 1150px;
   &--gray {
     @include viewport--md {
       background-color: $color-bg-title;
@@ -7,6 +9,9 @@
 }
 
 .header-sub__container {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
   max-width: 1150px;
   margin: 0 auto;
   background-color: #fafafa;
@@ -14,8 +19,10 @@
   @include viewport--md {
     display: flex;
     justify-content: space-between;
-    padding-left: $padding--md;
-    padding-right: $padding--md;
+    align-items: center;
+    padding-top: 11px;
+    padding-left: 45px;
+    padding-right: 45px;
 
     &--gray {
       background-color: $color-bg-title;
@@ -25,16 +32,41 @@
 
 .header-sub__list {
   @include list-reset;
+  background-color: $color-white;
+  flex-direction: column;
   display: none;
+
+  &--open {
+    display: block;
+  }
 
   @include viewport--md {
     display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    margin: 0;
+  }
+}
+
+.header-sub__item {
+  width: 100%;
+  height: 79px;
+  border-bottom: 1px solid $color-bg-title;
+  display: flex;
+  align-items: center;
+  padding-left: 70px;
+
+  @include viewport--md {
+    border: none;
+    padding: 0;
+    height: auto;
+    width: auto;
   }
 }
 
 .header-sub__item:not(:last-child) {
   @include viewport--md {
-    margin-right: 25px;
+    margin-right: 35px;
   }
 }
 
@@ -45,13 +77,40 @@
   font-size: 17px;
   line-height: 1.41;
   padding: 10px 6px;
+
+  @include viewport--md {
+    font-weight: 700;
+  font-size: 15px;
+  line-height: 1.6;
+  }
+}
+
+.header-sub__icon {
+  position: absolute;
+  left: 30px;
 }
 
 .header-sub__delivery {
   display: none;
+  font-size: 15px;
+  line-height: 1.6;
 
   @include viewport--md {
     display: block;
+  }
+}
+
+.item-hidden-mobile {
+  display: none;
+}
+
+.item-hidden-tablet {
+  @include viewport--md {
+    display: none;
+  }
+
+  @include viewport--lg {
+    display: flex;
   }
 }
 

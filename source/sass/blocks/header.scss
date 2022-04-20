@@ -6,71 +6,91 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid $color-bg-title;
 
   @include viewport--md {
     height: 89px;
     justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
     border-bottom: 1px solid $color-bg-title;
   }
 
   @include viewport--lg {
     justify-content: space-between;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 16px;
+    padding-right: 18px;
   }
 }
 
 .header__left-wrapper {
   order: -1;
+
+  @include viewport--md {
+    order: 0;
+  }
+
+  @include viewport--lg {
+    order: -1;
+  }
 }
 
 .header__logo-link {
   text-decoration: none;
 }
 
+.header__logo {
+  @include viewport--md {
+    width: 113px;
+    height: 45px;
+  }
+
+  @include viewport--lg {
+    width: 136px;
+    height: 65px;
+  }
+}
+
 .header__toggle {
   position: absolute;
-  right: 33px;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 31px;
+  top: 23px;
   width: 20px;
-  height: 14px;
+  height: 20px;
+  background-color: transparent;
   border: none;
-  background-color: $color-white;
   padding: 0;
-  cursor: pointer;
 
   @include viewport--md {
     display: none;
   }
 }
 
-.header__toggle-line {
+.header__toggle--closed::before {
+  content: "";
   display: block;
-  position: relative;
-  height: 2px;
+  top: 0;
   width: 20px;
+  height: 2px;
   background-color: $color-title;
+  box-shadow: 0 6px 0 $color-title, 0 12px 0 $color-title;
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    display: block;
-    height: 2px;
-    width: 20px;
-    background-color: $color-title;
-    bottom: 4px;
-  }
+.header__toggle--opened::before,
+.header__toggle--opened::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 25px;
+  background-color: $color-title;
+  display: block;
 
-  &::after {
-    position: absolute;
-    content: "";
-    display: block;
-    height: 2px;
-    width: 20px;
-    background-color: $color-title;
-    top: 4px;
-  }
+}
+
+.header__toggle--opened::before {
+  transform: rotate(45deg);
+}
+
+.header__toggle--opened::after {
+  transform: rotate(-45deg);
 }

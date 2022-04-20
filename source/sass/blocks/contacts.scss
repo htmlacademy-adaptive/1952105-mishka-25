@@ -7,6 +7,15 @@
   padding-top: 38px;
   padding-bottom: 39px;
 
+  @include viewport--md {
+    padding-top: 68px;
+    padding-bottom: 56px;
+    background-image: url("../img/decor/flag.svg");
+    background-position: top 44px right 53px;
+    background-size: 47px 81px;
+    background-repeat: no-repeat;
+  }
+
   @include viewport--lg {
     display: grid;
     grid-template-columns: 1fr min-content;
@@ -26,6 +35,10 @@
 
 .contacts__title {
   margin-bottom: 28px;
+
+  @include viewport--md {
+    margin-bottom: 50px;
+  }
 }
 
 .contacts__box {
@@ -37,7 +50,8 @@
 
   @include viewport--md {
     display: flex;
-    justify-content: space-between;
+    font-size: 17px;
+    line-height: 1.76;
   }
 
   @include viewport--lg {
@@ -63,9 +77,19 @@
   }
 }
 
-.contacts__wrapper {
+.contacts__wrapper-email,
+.contacts__wrapper-address {
   display: flex;
   justify-content: start;
+  align-items: baseline;
+}
+
+.contacts__wrapper-email {
+  margin-bottom: 30px;
+
+  @include viewport--md {
+    margin-right: 48px;
+  }
 }
 
 .contacts__name-email {
@@ -78,9 +102,12 @@
 
 .contacts__button {
   padding: 16px 39px;
+  width: 260px;
+  height: 52px;
 
   @include viewport--md {
     padding: 16px 27px;
+    width: 230px;
   }
 }
 
@@ -88,6 +115,7 @@
   width: 100%;
   height: 454px;
   background-color: greenyellow;
+  margin-bottom: 45px;
 
   @include viewport--md {
     height: 457px;

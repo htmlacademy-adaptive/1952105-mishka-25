@@ -19,12 +19,22 @@
   font-size: 17px;
   line-height: 1.41;
 
+  &:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
   @include viewport--md {
     padding: 32px 34px;
   }
+}
 
-  @include viewport--lg {
-  }
+.nav__link:hover .nav__icon {
+  fill: $color-green;
+  opacity: 1;
 }
 
 .nav__icon {
@@ -55,7 +65,7 @@
 
 .nav__item:not(:last-child) {
   @include viewport--lg {
-      margin-right: 50px;
+    margin-right: 3px;
   }
 }
 

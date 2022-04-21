@@ -37,6 +37,10 @@
 
 .header__logo-link {
   text-decoration: none;
+
+  @include viewport--lg {
+    margin-right: 62px;
+  }
 }
 
 .header__logo {
@@ -46,8 +50,8 @@
   }
 
   @include viewport--lg {
-    width: 136px;
-    height: 65px;
+    width: 148px;
+    height: 71px;
   }
 }
 

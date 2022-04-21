@@ -17,4 +17,14 @@
 
 .social__link {
   padding: 8px 15px;
+  color: $color-title;
+
+  &:hover {
+    color: $color-green;
+  }
+
+  &:active {
+    color: $color-green;
+    opacity: 0.6;
+  }
 }

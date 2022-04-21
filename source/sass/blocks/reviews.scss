@@ -9,11 +9,12 @@
 
   @include viewport--md {
     background-size: 772px 17px;
-    padding-bottom: 87px;
+    padding-bottom: 68px;
   }
 
   @include viewport--lg {
     background-size: 1050px 23px;
+    padding-bottom: 141px;
   }
 }
 
@@ -28,8 +29,12 @@
     background-size: 350px 457px;
     background-position: left center;
     background-repeat: no-repeat;
-    padding-top: 85px;
+    padding-top: 93px;
     padding-bottom: 42px;
+  }
+
+  @include viewport--lg {
+    padding-left: 224px;
   }
 }
 
@@ -43,6 +48,7 @@
 .reviews__item {
   display: flex;
   flex-direction: column;
+  margin-bottom: 24px;
 }
 
 .reviews__title {
@@ -55,18 +61,27 @@
     order: -2;
     margin-bottom: 40px;
   }
+
+  @include viewport--lg {
+    margin-bottom: 31px;
+  }
 }
 
 .reviews__text {
   font-size: 15px;
   line-height: 2;
   color: $color-text;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 
   @include viewport--md {
     font-size: 17px;
     line-height: 1.76;
     margin-bottom: 60px;
+  }
+
+  @include viewport--lg {
+    margin-bottom: 44px;
+    width: 813px;
   }
 }
 
@@ -95,7 +110,7 @@
     z-index: 1;
     align-self: end;
     justify-self: end;
-    margin-bottom: 6px;
+    margin-bottom: 26px;
   }
 }
 
@@ -109,6 +124,15 @@
   background-size: 50px 25px;
   background-repeat: no-repeat;
   padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @include viewport--md {
     border: none;
@@ -127,6 +151,15 @@
   background-repeat: no-repeat;
   transform: rotate(180deg);
   padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @include viewport--md {
     border: none;

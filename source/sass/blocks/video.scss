@@ -1,5 +1,9 @@
 .video {
   padding-bottom: 55px;
+
+  @include viewport--md {
+    padding-bottom: 76px;
+  }
 }
 
 .video__container {
@@ -7,7 +11,6 @@
   width: 260px;
   display: grid;
   grid-template-columns: 1fr;
-  padding-top: 21px;
   margin: 0 auto;
 
   @include viewport--md {
@@ -23,15 +26,18 @@
 
 .video__title {
   background-image: url("../img/icons/video.svg");
-  background-position: left 25px;
+  background-position: left 30px center;
   background-size: 32px 22px;
   background-repeat: no-repeat;
   margin-bottom: 26px;
-  padding-left: 100px;
+  padding-left: 90px;
   justify-self: end;
 
   @include viewport--md {
     justify-self: start;
+    padding-left: 106px;
+    background-position: left 41px bottom 3px;
+    margin-bottom: 8px;
   }
 
   @include viewport--lg {
@@ -41,15 +47,28 @@
 
 .video__wrapper {
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 22px;
 
   @include viewport--md {
     order: -1;
+    margin-bottom: 41px;
   }
 
   @include viewport--lg {
     grid-column: 1/2;
     grid-row: 1/4;
+  }
+}
+
+.catalog__video-photo {
+  @include viewport--md {
+    width: 668px;
+    height: 455px;
+  }
+
+  @include viewport--lg {
+    width: 682px;
+    height: 455px;
   }
 }
 
@@ -81,10 +100,13 @@
   line-height: 1.84;
   color: $color-text;
   margin-bottom: 41px;
-  margin-left: 30px;
+  margin-left: 33px;
 
   @include viewport--md {
-    margin-left: 40px;
+    width: 591px;
+    font-size: 15px;
+    line-height: 2;
+    margin-left: 4px;
   }
 
   @include viewport--lg {
@@ -94,12 +116,13 @@
 }
 
 .video__order-link {
+  width: 192px;
   justify-self: center;
   margin-bottom: 33px;
-  padding: 18px 0 18px;
+  padding: 18px 0 10px;
 
   @include viewport--md {
-    width: 170px;
+    width: 584px;
   }
 
   @include viewport--lg {

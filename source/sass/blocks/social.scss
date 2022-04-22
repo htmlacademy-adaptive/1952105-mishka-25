@@ -1,5 +1,30 @@
 .social {
+  width: 260px;
   @include list-reset;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $color-light-grey;
+
+  @include viewport--md {
+    width: auto;
+    border: none;
+    padding: 0;
+    justify-content: start;
+  }
+}
+
+.social__link {
+  padding: 8px 15px;
+  color: $color-title;
+
+  &:hover {
+    color: $color-green;
+  }
+
+  &:active {
+    color: $color-green;
+    opacity: 0.6;
+  }
 }

@@ -1,18 +1,20 @@
 .reviews {
   display: flex;
   flex-direction: column;
-  padding-bottom: 68px;
+  padding-bottom: 50px;
   background-image: url("../img/decor/zigzag-line.svg");
   background-position: bottom center;
   background-size: auto 6px;
   background-repeat: repeat-x;
 
   @include viewport--md {
-    background-size: auto 17px;
+    background-size: 772px 17px;
+    padding-bottom: 68px;
   }
 
   @include viewport--lg {
-    background-size: auto 23px;
+    background-size: 1050px 23px;
+    padding-bottom: 141px;
   }
 }
 
@@ -27,14 +29,18 @@
     background-size: 350px 457px;
     background-position: left center;
     background-repeat: no-repeat;
-    padding-top: 47px;
+    padding-top: 93px;
     padding-bottom: 42px;
+  }
+
+  @include viewport--lg {
+    padding-left: 224px;
   }
 }
 
 .reviews__list {
   @include list-reset;
-  margin-bottom: 30px;
+  margin-bottom: 7px;
   grid-column: 1/-1;
   grid-row: 2/3;
 }
@@ -42,6 +48,7 @@
 .reviews__item {
   display: flex;
   flex-direction: column;
+  margin-bottom: 24px;
 }
 
 .reviews__title {
@@ -52,6 +59,11 @@
   @include viewport--md {
     grid-column: 1/2;
     order: -2;
+    margin-bottom: 40px;
+  }
+
+  @include viewport--lg {
+    margin-bottom: 31px;
   }
 }
 
@@ -59,7 +71,18 @@
   font-size: 15px;
   line-height: 2;
   color: $color-text;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
+
+  @include viewport--md {
+    font-size: 17px;
+    line-height: 1.76;
+    margin-bottom: 60px;
+  }
+
+  @include viewport--lg {
+    margin-bottom: 44px;
+    width: 813px;
+  }
 }
 
 .reviews__name {
@@ -77,7 +100,7 @@
 
 .reviews__button-wrapper {
   display: flex;
-  margin-bottom: 38px;
+  margin-bottom: 35px;
   grid-column: 1/-1;
   justify-self: center;
 
@@ -86,6 +109,8 @@
     grid-row: 2/3;
     z-index: 1;
     align-self: end;
+    justify-self: end;
+    margin-bottom: 26px;
   }
 }
 
@@ -98,9 +123,20 @@
   background-position: center;
   background-size: 50px 25px;
   background-repeat: no-repeat;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @include viewport--md {
     border: none;
+    width: 90px;
   }
 }
 
@@ -114,9 +150,20 @@
   background-size: 50px 25px;
   background-repeat: no-repeat;
   transform: rotate(180deg);
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @include viewport--md {
     border: none;
+    width: 90px;
   }
 }
 
@@ -125,10 +172,16 @@
   max-width: 260px;
   justify-self: center;
   padding: 16px 65px;
+  width: 260px;
+  height: 52px;
 
   @include viewport--md {
+    width: 175px;
+    height: 52px;
     padding: 16px 26px;
     grid-column: 2/3;
     order: -1;
+    align-self: start;
+    justify-self: end;
   }
 }

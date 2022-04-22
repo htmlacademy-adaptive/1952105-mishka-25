@@ -1,9 +1,66 @@
 .footer {
   background-color: $color-bg-title;
+  padding-top: 27px;
+
+  @include viewport--md {
+    padding-top: 33px;
+    padding-bottom: 32px;
+  }
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include viewport--md {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer__logo-link {
+  display: none;
+
+  &:hover {
+    fill: $color-green;
+  }
+
+  &:active {
+    fill: $color-green;
+    opacity: 0.6;
+  }
+
+  @include viewport--md {
+    display: block;
+  }
 }
 
 .footer__developed {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
   font-weight: 700;
-  font-size: 27px;
-  line-height: 1.11;
+  font-size: 19px;
+  line-height: 0.94;
+
+  @include viewport--md {
+    margin: 0;
+  }
 }
+
+.footer__link-htmlacademy {
+  margin-left: 25px;
+  padding: 20px 5px;
+  color: $color-green;
+
+  &:hover {
+    color: $color-dark-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+

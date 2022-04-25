@@ -6,6 +6,7 @@
   background-position: bottom center;
   background-size: auto 6px;
   background-repeat: repeat-x;
+  background-color: $color-white;
 
   @include viewport--md {
     background-size: 772px 17px;

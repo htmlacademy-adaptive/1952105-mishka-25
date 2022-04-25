@@ -1,4 +1,8 @@
 .contacts {
+  background-color: $color-white;
+}
+
+.contacts__wrapper {
   max-width: 1150px;
   margin: 0 auto;
   display: flex;
@@ -6,6 +10,7 @@
   align-items: center;
   padding-top: 41px;
   padding-bottom: 39px;
+  background-color: $color-white;
 
   @include viewport--md {
     padding-top: 68px;

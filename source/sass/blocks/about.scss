@@ -1,6 +1,7 @@
 .about {
   padding-top: 37px;
   padding-bottom: 28px;
+  background-color: $color-white;
 
   @include viewport--md {
     padding-top: 50px;

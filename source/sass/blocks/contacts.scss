@@ -26,7 +26,7 @@
     grid-template-columns: 1fr min-content;
     padding-left: 50px;
     padding-right: 50px;
-    padding-bottom: 62px;
+    padding-bottom: 48px;
     background-position: top 132px left 113px;
   }
 }
@@ -40,7 +40,7 @@
   }
 
   @include viewport--lg {
-    padding-top: 58px;
+    padding-top: 50px;
     padding-left: 177px;
     padding-right: 22px;
   }
@@ -50,11 +50,11 @@
   margin-bottom: 28px;
 
   @include viewport--md {
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 
   @include viewport--lg {
-    margin-bottom: 38px;
+    margin-bottom: 34px;
 
   }
 }
@@ -70,6 +70,7 @@
     display: flex;
     font-size: 17px;
     line-height: 1.76;
+    margin-bottom: 46px;
   }
 
   @include viewport--lg {
@@ -89,6 +90,11 @@
   &:active {
     border-color: rgba(70, 193, 174, 0.1);
   }
+
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    border-radius: 3px;
+  }
 }
 
 .contacts__address {
@@ -97,6 +103,19 @@
   text-decoration: none;
   color: $color-text;
   max-width: 183px;
+
+  &:hover {
+    color: $color-green;
+  }
+
+  &:active {
+    border-color: rgba(70, 193, 174, 0.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    border-radius: 3px;
+  }
 
   @include viewport--md {
     max-width: 257px;
@@ -130,12 +149,20 @@
   }
 
   @include viewport--lg {
-    margin-right: 18px;
+    margin-right: 23px;
   }
 }
 
 .contacts__name-address {
   margin-right: 34px;
+
+  @include viewport--md {
+    margin-right: 26px;
+  }
+
+  @include viewport--lg {
+    margin-right: 23px;
+  }
 }
 
 .contacts__button {
@@ -152,6 +179,8 @@
     align-self: start;
     justify-self: center;
     margin-left: 52px;
+    margin-top: 8px;
+
   }
 }
 
@@ -163,6 +192,7 @@
 
   @include viewport--md {
     height: 457px;
+    margin-bottom: 56px;
   }
 
   @include viewport--lg {

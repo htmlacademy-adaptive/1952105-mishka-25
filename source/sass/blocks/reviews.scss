@@ -10,12 +10,12 @@
 
   @include viewport--md {
     background-size: 772px 17px;
-    padding-bottom: 68px;
+    padding-bottom: 63px;
   }
 
   @include viewport--lg {
     background-size: 1050px 23px;
-    padding-bottom: 141px;
+    padding-bottom: 85px;
   }
 }
 
@@ -30,12 +30,15 @@
     background-size: 350px 457px;
     background-position: left center;
     background-repeat: no-repeat;
-    padding-top: 93px;
+    padding-top: 100px;
     padding-bottom: 42px;
   }
 
   @include viewport--lg {
+    background-position: left 50px center;
     padding-left: 224px;
+    padding-bottom: 72px;
+    padding-top: 79px;
   }
 }
 
@@ -81,7 +84,8 @@
   }
 
   @include viewport--lg {
-    margin-bottom: 44px;
+    margin-top: 4px;
+    margin-bottom: 45px;
     width: 813px;
   }
 }
@@ -91,6 +95,17 @@
   font-size: 17px;
   line-height: 1.41;
   color: $color-title;
+
+  @include viewport--md {
+    font-size: 18px;
+    line-height: 1.33;
+    margin-bottom: 4px;
+  }
+
+  @include viewport--lg {
+    font-size: 17px;
+    line-height: 1.41;
+  }
 }
 
 .reviews__social {
@@ -111,7 +126,11 @@
     z-index: 1;
     align-self: end;
     justify-self: end;
-    margin-bottom: 26px;
+    margin-bottom: 31px;
+  }
+
+  @include viewport--lg {
+    margin-bottom: 34px;
   }
 }
 
@@ -135,9 +154,15 @@
     opacity: 0.6;
   }
 
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    border-radius: 3px;
+  }
+
   @include viewport--md {
     border: none;
-    width: 90px;
+    width: 70px;
+    margin-right: 18px;
   }
 }
 
@@ -162,9 +187,15 @@
     opacity: 0.6;
   }
 
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    border-radius: 3px;
+  }
+
   @include viewport--md {
     border: none;
-    width: 90px;
+    width: 70px;
+    margin-right: 8px;
   }
 }
 

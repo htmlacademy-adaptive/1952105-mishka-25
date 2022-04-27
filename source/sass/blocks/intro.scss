@@ -22,8 +22,8 @@
       position: absolute;
       width: 100%;
       height: 24px;
-      background: url("../img/decor/wave.svg") center/ auto 24px repeat-x;
-      bottom: -11px;
+      background: url("../img/decor/wave-tablet.svg") center/ auto 24px repeat-x;
+      bottom: -10px;
     }
   }
 
@@ -39,8 +39,8 @@
       position: absolute;
       width: 100%;
       height: 34px;
-      background: url("../img/decor/wave.svg") center/ 1150px 34px repeat-x;
-      bottom: -17px;
+      background: url("../img/decor/wave-desktop.svg") center/ 1150px 34px repeat-x;
+      bottom: -15px;
     }
   }
 }
@@ -86,7 +86,7 @@
   }
 
   @include viewport--lg {
-    padding: 25px 30px 34px 36px;
+    padding: 25px 36px 34px 36px;
     min-width: 525px;
   }
 }
@@ -113,6 +113,11 @@
   font-size: 19px;
   line-height: 1.26;
   font-weight: 700;
+
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    border-radius: 3px;
+  }
 
   @include viewport--md {
     font-size: 20px;

@@ -2,7 +2,11 @@
   padding-bottom: 55px;
 
   @include viewport--md {
-    padding-bottom: 76px;
+    padding-bottom: 75px;
+  }
+
+  @include viewport--lg {
+    padding-bottom: 105px;
   }
 }
 
@@ -12,15 +16,26 @@
   display: grid;
   grid-template-columns: 1fr;
   margin: 0 auto;
+  padding-top: 21px;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 
   @include viewport--md {
     width: 668px;
     justify-items: center;
+    padding-top: 0;
   }
 
   @include viewport--lg {
     width: 100%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 682px 1fr;
+    grid-template-rows: 151px 151px 151px;
   }
 }
 
@@ -42,6 +57,14 @@
 
   @include viewport--lg {
     grid-column: 2/3;
+    align-self: end;
+    margin: 0;
+    padding: 0;
+    margin-left: 78px;
+    margin-bottom: 8px;
+    width: 178px;
+    padding-top: 65px;
+    background-position: left 1px bottom 74px;
   }
 }
 
@@ -77,13 +100,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 95px;
-  height: 71px;
+  width: 100px;
+  height: 76px;
   background-image: url("../img/icons/play.svg");
   background-position: center;
   background-size: 100px 76px;
   background-repeat: no-repeat;
   border: none;
+  border-radius: 15%;
 
   &:hover {
     transform: translate(-50%, -50%) scale(1.2);
@@ -92,6 +116,15 @@
   &:active {
     transform: translate(-50%, -50%) scale(0.8);
     opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    border-radius: 3px;
+  }
+
+  @include viewport--lg {
+    top: 55%;
   }
 }
 
@@ -110,8 +143,11 @@
   }
 
   @include viewport--lg {
+    width: 252px;
     margin-left: 80px;
     grid-column: 2/3;
+    margin-left: 45px;
+    margin-top: 20px;
   }
 }
 
@@ -126,7 +162,11 @@
   }
 
   @include viewport--lg {
+    width: 230px;
     grid-column: 2/3;
+    align-self: end;
+    margin-bottom: 60px;
+    margin-left: 23px;
   }
 }
 

@@ -1,10 +1,26 @@
-
-.form {
-  display: grid;
-  grid-template-columns: 1fr;
+.form-container {
+  padding-bottom: 55px;
 
   @include viewport--md {
-    grid-template-columns: 1fr 1fr;
+     padding: 0;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.05;
+
+  @include viewport--md {
+    font-size: 19px;
+    line-height: 0.94;
   }
 }
 
@@ -19,26 +35,237 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
+  margin: 0;
 
   @include viewport--md {
     flex-direction: row;
     justify-content: start;
+}
+  }
+
+/* type ------------------------------------------*/
+
+.form-type {
+  padding-bottom: 31px;
+
+  @include viewport--md {
+    padding-bottom: 47px;
+    padding-left: 50px;
+  }
+
+  @include viewport--lg {
+    padding-left: 110px;
   }
 }
 
-.form__title {
+.form__title-type {
   display: block;
   margin-bottom: 30px;
 
   @include viewport--md {
-    display: flex;
-    margin-right: 150px;
-    grid-column: 1/-1;
+    margin-right: 132px;
+    padding-top: 17px;
+  }
+
+  @include viewport--lg {
+    margin-right: 79px;
   }
 }
 
-.title-group {
+.form__label-type:not(:last-child) {
+  margin-bottom: 11px;
+
+  @include viewport--md {
+    margin-bottom: 24px;
+  }
+}
+
+.form-wrapper-color {
+  width: 100%;
+}
+
+.form-wrapper-color:nth-child(even) {
+  @include viewport--md {
+  background-color: $color-bg-title;
+  }
+}
+
+/* color --------------------------------------------*/
+.form__wrapper-checkbox {
+  display: flex;
+  flex-direction: column;
+
+  @include viewport--md {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 59px;
+  }
+
+  @include viewport--lg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.form-color {
+  padding-bottom: 10px;
+
+  @include viewport--md {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 23px;
+  }
+
+  @include viewport--lg {
+    padding-top: 50px;
+    padding-left: 111px;
+    padding-bottom: 26px;
+  }
+}
+
+.form__title-color {
+  margin-bottom: 25px;
+
+  @include viewport--md {
+    margin-right: 123px;
+    padding-top: 19px;
+  }
+
+  @include viewport--lg {
+    margin-right: 70px;
+  }
+}
+
+.form__label-color {
+  margin-bottom: 23px;
+
+  @include viewport--md {
+    margin-bottom: 25px;
+  }
+}
+
+/* name ----------------------------------------------*/
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include viewport--md {
+    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+
+  @include viewport--md {
+    flex-direction: row;
+  }
+}
+
+.form__title {
+  padding-bottom: 14px;
+
+  @include viewport--md {
+    padding-left: 50px;
+    padding-top: 51px;
+    padding-bottom: 26px;
+  }
+
+  @include viewport--lg {
+    padding-top: 48px;
+    padding-left: 111px;
+  }
+}
+
+.form__title-name {
+  margin-bottom: 30px;
+
+  @include viewport--md {
+    margin-right: 123px;
+    padding-top: 19px;
+  }
+
+  @include viewport--lg {
+    margin-right: 74px;
+  }
+}
+
+.form__label-text {
+  @include viewport--md {
+    padding-bottom: 19px;
+  }
+}
+
+.form__input-text {
+  font-size: 17px;
+  line-height: 1.05;
+  margin-bottom: 21px;
+  border: none;
+  border-bottom: 2px solid $color-title;
+  width: 260px;
+  height: 52px;
+  padding-top: 6px;
+
+  &:hover {
+    border-color: $color-green;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-bottom: 2px solid $color-green;
+  }
+
+  @include viewport--md {
+    width: 375px;
+    margin-left: 26px;
+    padding-left: 20px;
+    font-size: 19px;
+    line-height: 0.94;
+    margin-bottom: 24px;
+  }
+
+  @include viewport--lg {
+    width: 573px;
+  }
+}
+
+.form__input-text--size {
+  @include viewport--md {
+    width: 428px;
+  }
+
+  @include viewport--lg {
+    width: 626px;
+  }
+}
+
+/* contacts --------------------------------------------------*/
+
+.input-container {
+  position: relative;
+}
+
+.form-contacts {
+  display: flex;
+  flex-direction: column;
+
+  @include viewport--md {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 26px;
+    column-gap: 95px;
+  }
+
+  @include viewport--lg {
+    padding-left: 110px;
+  }
+}
+
+.form__label-phone {
+  margin-bottom: 5px;
   font-weight: 700;
   font-size: 17px;
   line-height: 0.94;
@@ -47,63 +274,292 @@
 
   &::after {
     content: "";
-    width: 200px;
+    flex-grow: 1;
+    margin-left: 27px;
     height: 1px;
-    background-color: $color-green;
-    display: inline-block;
-  }
+    background-color: #63d1bb;
 
-  @include viewport--md {
-    &::after {
+    @include viewport--md {
       display: none;
     }
   }
-}
 
-.form__wrapper {
   @include viewport--md {
-    max-width: 400px;
-    display: flex;
-    flex-wrap: wrap;
+    margin-right: 135px;
+    margin-bottom: 26px;
+  }
+
+  @include viewport--lg {
+    margin-right: 83px;
   }
 }
 
-.form__label {
-  display: flex;
-  align-items: center;
+.form__label-email {
   font-weight: 700;
   font-size: 17px;
-  line-height: 1.05;
-  margin-bottom: 11px;
+  line-height: 0.94;
+  text-transform: uppercase;
+  color: $color-green;
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    margin-left: 18px;
+    height: 1px;
+    background-color: #63d1bb;
+
+    @include viewport--md {
+      display: none;
+    }
+  }
 
   @include viewport--md {
+    margin-right: 109px;
+    margin-bottom: 23px;
+  }
+
+  @include viewport--lg {
+    margin-right: 57px;
+  }
+}
+
+.form__input-contacts {
+  position: relative;
+  width: 260px;
+  height: 52px;
+  border: none;
+  border-bottom: 2px solid $color-title;
+  margin-bottom: 36px;
+  font-size: 17px;
+  line-height: 1.05;
+  color: rgba(0, 0, 0, 0.3);
+  padding-top: 7px;
+  background-color: transparent;
+
+  &:hover {
+    border-color: $color-green;
+  }
+
+  &:active {
+    outline: none;
+    border-color: $color-green;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $color-green;
+    color: $color-title;
+  }
+
+  @include viewport--md {
+    width: 501px;
+    margin-bottom: 24px;
+    padding-left: 18px;
+    padding-bottom: 8px;
     font-size: 19px;
     line-height: 0.94;
+  }
+
+  @include viewport--lg {
+    width: 700px;
+  }
+}
+
+.form__input-contacts:hover+.form__icon-phone,
+.form__input-contacts:hover+.form__icon-email {
+  color: $color-green;
+  opacity: 1;
+}
+
+.form__input-contacts:active+.form__icon-phone,
+.form__input-contacts:active+.form__icon-email {
+  color: $color-green;
+  opacity: 1;
+}
+
+.form__input-contacts:focus-visible+.form__icon-phone,
+.form__input-contacts:focus-visible+.form__icon-email {
+  color: $color-green;
+  opacity: 1;
+}
+
+.form__icon-phone {
+  position: absolute;
+  right: 7px;
+  top: 11px;
+
+  @include viewport--md {
+    right: 26px;
+  }
+
+  @include viewport--lg {
+    right: 9px;
+  }
+}
+
+.form__icon-email {
+  position: absolute;
+  right: 3px;
+  top: 16px;
+
+  @include viewport--md {
+    right: 22px;
+  }
+
+  @include viewport--lg {
+    right: 5px;
+  }
+}
+
+/* additionally -------------------------------------------------*/
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+
+  @include viewport--md {
+    flex-direction: row;
+    padding-right: 50px;
+    padding-left: 50px;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  @include viewport--lg {
+    justify-content: center;
+  }
+}
+
+.form__title-additionally {
+  margin-bottom: 22px;
+
+  @include viewport--md {
+    padding-top: 18px;
+    margin-right: 127px;
+    padding-bottom: 36px;
+  }
+
+  @include viewport--lg {
+    margin-right: 75px;
+  }
+}
+
+.form-additionally {
+  @include viewport--md {
+    padding-left: 51px;
+    padding-top: 50px;
+    padding-bottom: 36px;
+  }
+
+  @include viewport--lg {
+    padding-left: 111px;
+    padding-bottom: 32px;
+  }
+}
+
+.form-textarea {
+  width: 260px;
+  height: 142px;
+  resize: none;
+  font-size: 17px;
+  line-height: 1.05;
+  color: rgba(0, 0, 0, 0.3);
+  padding-top: 17px;
+  padding-left: 17px;
+  margin-bottom: 17px;
+  border: 2px solid $color-text;
+
+  &:hover {
+    border-color: $color-green;
+  }
+
+  &:active {
+    border-color: $color-green;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $color-green;
+    color: $color-title;
+  }
+
+  @include viewport--md {
+    width: 501px;
+    font-size: 19px;
+    line-height: 0.94;
+  }
+
+  @include viewport--lg {
+    width: 700px;
+  }
+}
+
+.form-notifications {
+  font-size: 14px;
+  line-height: 1.14;
+  color: $color-text;
+  margin-bottom: 30px;
+
+  @include viewport--md {
+    margin-left: auto;
+    order: 1;
+    font-size: 17px;
+    line-height: 1.76;
+    margin-bottom: 0;
+  }
+
+  @include viewport--lg {
+    margin-left: 0;
+  }
+}
+
+.form__submit {
+  width: 260px;
+  height: 52px;
+  padding: 18px 37px;
+
+  @include viewport--md {
+    grid-column: 1/2;
+    padding: 18px 29px;
+    font-size: 17px;
+    line-height: 1.76;
+    width: 230px;
+  }
+
+  @include viewport--lg {
+    margin-right: 166px;
+  }
+}
+
+.title-group {
+  position: relative;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 0.94;
+  text-transform: uppercase;
+  color: $color-green;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    margin-left: 18px;
+    height: 1px;
+    background-color: #63d1bb;
+
+    @include viewport--md {
+      display: none;
+    }
+  }
+
+  @include viewport--md {
+    display: block;
   }
 }
 
 .input-hidden {
   @include input-hidden;
-}
-
-.form-color {
-  @include viewport--md {
-    grid-column: 1/-1;
-  }
-}
-
-.form__wrapper-checkbox {
-  display: flex;
-  flex-direction: column;
-
-  @include viewport--md {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include viewport--lg {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .form__label-text {
@@ -116,105 +572,11 @@
     align-items: center;
   }
 }
-.form__input-text {
-  border: none;
-  border-bottom: 2px solid $color-title;
-  width: 260px;
-  height: 52px;
-  margin-bottom: 10px;
 
-  &:hover {
-    border-color: $color-green;
-  }
-
-  &:focus-visible {
-    outline: none;
-    border-bottom: 2px solid $color-green;
-  }
-
-  @include viewport--md {
-    width: 501px;
-  }
-}
-
-.form-contacts {
-  @include viewport--md {
-    display: grid;
-    grid-template-columns: 88px 1fr;
-    column-gap: 95px;
-    grid-column: 1/-1;
-  }
-}
-
-.form-additionally {
-  @include viewport--md {
-    grid-column: 1/-1;
-  }
-}
-
-.form-textarea {
-  width: 260px;
-  height: 142px;
-  resize: none;
-
-  @include viewport--md {
-    width: 501px;
-  }
-
-  @include viewport--lg {
-    width: 700px;
-  }
-}
-
-.form-notifications {
-  font-size: 14px;
-  line-height: 1.14;
-  color: $color-text;
-
-  @include viewport--md {
-    grid-column: 2/3;
-    align-self: center;
-    order: 1;
-  }
-}
-
-.form__submit {
-  padding: 18px 37px;
-
-  @include viewport--md {
-    grid-column: 1/2;
-    padding: 18px 32px;
-    font-size: 17px;
-    line-height: 1.76;
-  }
-}
-
-.form__label-phone,
-.form__label-email {
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 0.94;
-  text-transform: uppercase;
-  color: $color-green;
-
-  &::after {
-    content: "";
-    width: 200px;
-    height: 1px;
-    background-color: $color-green;
-    display: inline-block;
-  }
-
-  @include viewport--md {
-    &::after {
-      display: none;
-    }
-  }
-}
 //-----------------------------------------------------radio
 
 .form__radio-custom {
-  width: 42px;
+  min-width: 42px;
   height: 42px;
   background-color: $color-white;
   border-radius: 50%;
@@ -228,32 +590,87 @@
   &:active {
     border: 2px $color-light-grey solid;
   }
+
+  &:focus-visible {
+    border-color: $color-dark-green;
+  }
+
+  @include viewport--md {
+    width: 52px;
+    height: 52px;
+    margin-right: 27px;
+  }
 }
 
 .form__radio:checked + .form__radio-custom {
-  background: url("/img/icons/point.svg") center/ 15px 15px no-repeat;
+  background-image: url("../img/icons/point.svg");
+  background-size: 18px 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include viewport--md {
+    background-size: 22px 22px;
+  }
 }
 
-// checkbox
+.form__radio:focus-visible + .form__radio-custom {
+  border: 4px solid $color-focus;
+}
+
+.form__radio:disabled + .form__radio-custom {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.form__radio:disabled:hover + .form__radio-custom {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: $color-text;
+}
+
+// --------------------------------------------------checkbox
 
 .form__checkbox-custom {
   width: 38px;
   height: 38px;
   border: 2px solid $color-text;
-  margin-right: 19px;
+  margin-right: 23px;
 
   &:hover {
-    border: 2px solid $color-green;
+    border-color: $color-green;
   }
 
   &:active {
-    border: 2px solid $color-light-grey;
+    border-color: $color-green;
+  }
+
+  @include viewport--md {
+    width: 52px;
+    height: 52px;
+    margin-right: 30px;
   }
 }
 
-.form__checkbox:checked + .form__checkbox-custom {
-  background: url("/img/icons/tick.svg") center/31px 22px no-repeat;
+.form__checkbox:checked:hover + .form__checkbox-custom {
+  border-color: $color-green;
 }
 
-//------------------------------------------------------------------------
+.form__checkbox:checked + .form__checkbox-custom {
+  background-image: url("../img/icons/tick.svg");
+  background-size: 23px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: $color-light-grey;
+
+  @include viewport--md {
+    background-size: 31px 22px;
+  }
+}
+
+.form__checkbox:disabled + .form__checkbox-custom {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.form__checkbox:focus-visible + .form__checkbox-custom {
+  border: 4px solid $color-focus;
+}
+
 

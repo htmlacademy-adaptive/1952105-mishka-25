@@ -5,6 +5,7 @@
 
   @include viewport--md {
     display: flex;
+    flex-wrap: wrap;
   }
 
   @include viewport--lg {
@@ -27,8 +28,19 @@
     color: rgba(0, 0, 0, 0.3);
   }
 
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    border-radius: 3%;
+  }
+
   @include viewport--md {
-    padding: 32px 34px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    padding-left: 19px;
+  }
+
+  @include viewport--lg {
+    padding-left: 0;
   }
 }
 
@@ -37,23 +49,17 @@
   opacity: 1;
 }
 
+.nav__link:active .nav__icon{
+  color: $color-green;
+  opacity: 0.3;
+}
+
 .nav__icon {
-  margin-right: 10px;
+  margin-right: 25px;
 }
 
 .nav__item {
   padding: 30px 40px;
-
-  &--border {
-    @include viewport--md {
-      border-left: 1px solid $color-bg-title;
-      border-right: 1px solid $color-bg-title;
-    }
-
-    @include viewport--lg {
-      border-right: 1px solid $color-bg-title;
-    }
-  }
 
   @include viewport--md {
     display: flex;
@@ -63,9 +69,74 @@
   }
 }
 
-.nav__item:not(:last-child) {
+
+.nav__item--border {
+  position: relative;
+
+  @include viewport--md {
+    margin-right: 42px;
+
+    &::before {
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-color: $color-bg-title;
+      position: absolute;
+      right: 76px;
+    }
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-color: $color-bg-title;
+      position: absolute;
+      left: 68px;
+    }
+  }
+
   @include viewport--lg {
-    margin-right: 3px;
+    &::after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-color: $color-bg-title;
+      position: absolute;
+      left: 50px;
+    }
+  }
+}
+
+.nav__item:not(:last-child) {
+  @include viewport--md {
+    margin-right: 20px;
+  }
+
+  @include viewport--lg {
+    margin-right: 43px;
+  }
+}
+
+.nav__item-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item--border-right {
+  position: relative;
+
+  @include viewport--lg {
+    margin-right: 71px;
+    height: 89px;
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-color: $color-bg-title;
+      position: absolute;
+      left: 184px;
+    }
   }
 }
 

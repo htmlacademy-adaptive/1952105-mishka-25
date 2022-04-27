@@ -5,12 +5,24 @@
 }
 
 .form-modal__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border: none;
 }
 
-.form-modal__legend {
-  margin-bottom: 21px;
-  text-align: center;
+.form-modal__tittle {
+  align-self: center;
+  font-size: 15px;
+  line-height: 2;
+  color: $color-text;
+  margin-bottom: 18px;
+}
+
+
+.form-modal__wrapper-input {
+  display: flex;
+  margin-bottom: 24px;
 }
 
 .form-modal__label {
@@ -25,7 +37,6 @@
   line-height: 0.94;
   text-transform: uppercase;
   color: $color-text;
-  margin-bottom: 31px;
 
   &:hover {
     border: 2px $color-light-grey solid;
@@ -36,11 +47,21 @@
   }
 }
 
+.form-modal__label:not(:last-child) {
+  margin-right: 5px;
+}
+
 .form-modal__radio {
   @include input-hidden;
 }
 
+.form-modal__radio:checked + .form-modal__label {
+  border-color: $color-green;
+}
+
 .form-modal__button {
+  width: 260px;
+  min-height: 52px;
   background-color: $color-green;
   border: none;
   font-weight: 700;
@@ -48,6 +69,7 @@
   line-height: 0.94;
   color: $color-white;
   padding: 18px 68px;
+  text-transform: uppercase;
   cursor: pointer;
 
   &:hover {

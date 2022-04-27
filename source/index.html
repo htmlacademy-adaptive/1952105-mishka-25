@@ -8,7 +8,7 @@
   <title>HTML Academy: Мишка</title>
 </head>
 
-<body>
+<body class="body__index">
 
   <header class="header">
 
@@ -24,10 +24,10 @@
         <div class="header__left-wrapper">
             <nav class="nav">
                 <ul class="nav__list">
-                  <li class="nav__item item-hidden-tablet nav__item--border-right">
+                  <li class="nav__item-left item-hidden-tablet nav__item--border-right">
                     <a href="catalog.html" class="nav__link">Каталог товаров</a>
                   </li>
-                  <li class="nav__item item-hidden-tablet">
+                  <li class="nav__item-left item-hidden-tablet">
                     <a href="form.html" class="nav__link">Вязание на заказ</a>
                   </li>
                 </ul>
@@ -59,7 +59,7 @@
     </div>
     <div class="header-sub">
       <div class="header-sub__container">
-        <ul class="header-sub__list header-sub--nojs"> <!--header-sub__list--open-->
+        <ul class="header-sub__list header-sub__list--closed header-sub--nojs"> <!--header-sub__list--opened-->
             <li class="header-sub__item item-hidden-desktop">
                 <a href="catalog.html" class="header-sub__link">Каталог товаров</a>
             </li>
@@ -88,7 +88,7 @@
           </li>
           <li class="header-sub__item item-hidden-mobile item-hidden-tablet">
             <a href="#" class="header-sub__link">Распродажа</a>
-        </li>
+          </li>
         </ul>
         <span class="header-sub__delivery">Бесплатная доставка по России</span>
       </div>
@@ -199,11 +199,11 @@
       <address class="contacts__box">
         <div class="contacts__wrapper-email">
           <span class="contacts__name-email">e-mail:</span>
-          <a class="contacts__email" href="email:info@mimimishkashop.ru" >info@mimimishkashop.ru</a>
+          <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
         </div>
         <div class="contacts__wrapper-address">
           <span class="contacts__name-address">адрес:</span>
-          <a class="contacts__address" href="#" >г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д.
+          <a class="contacts__address" href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323117%2C59.938635&z=16.97" >г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д.
             19/8, офис 101</a>
         </div>
       </address>
@@ -269,21 +269,17 @@
   <div class="modal-order__page">
   <div class="modal-order">
     <h2 class="modal-order__title title title--h2">Добавить в корзину</h2>
-    <form class="form-modal" action="#" method="post">
+    <form class="form-modal" action="https://echo.htmlacademy.ru/" method="post">
       <fieldset class="form-modal__group">
-        <legend сlass="form-modal__legend">Выберите размер:</legend>
-          <label class="form-modal__label">
-            s
-            <input class="form-modal__radio" type="radio" name="product-size" value="s">
-          </label>
-          <label class="form-modal__label">
-           m
-            <input class="form-modal__radio" type="radio" name="product-size" value="m">
-          </label>
-          <label class="form-modal__label">
-            l
-            <input class="form-modal__radio" type="radio" name="product-size" value="l">
-          </label>
+        <span сlass="form-modal__tittle">Выберите размер:</span>
+        <div class="form-modal__wrapper-input">
+          <input class="form-modal__radio" id="modal-radio" type="radio" name="product-size" value="s">
+          <label class="form-modal__label" for="modal-radio">s</label>
+          <input class="form-modal__radio" id="modal-radio" type="radio" name="product-size" value="m">
+          <label class="form-modal__label" for="modal-radio">m</label>
+          <input class="form-modal__radio" id="modal-radio" type="radio" name="product-size" value="l">
+          <label class="form-modal__label" for="modal-radio">l</label>
+        </div>
         </fieldset>
         <input name="product_id" type="hidden">
         <button class="form-modal__button" type="submit" >Добавить</button>

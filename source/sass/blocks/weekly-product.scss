@@ -15,8 +15,8 @@
 
   @include viewport--lg {
     background-size: 1050px 23px;
-    padding-top: 70px;
-
+    padding-top: 55px;
+    padding-bottom: 47px;
   }
 }
 
@@ -57,7 +57,7 @@
     z-index: 1;
     font-size: 53px;
     line-height: 1.07;
-    padding-top: 62px;
+    padding-top: 76px;
     margin: 0;
   }
 }
@@ -90,6 +90,7 @@
     order: -1;
     margin-right: 42px;
     margin-bottom: -10px;
+    align-self: center;
   }
 }
 

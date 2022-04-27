@@ -3,7 +3,7 @@
 }
 
 .header__inner {
-  height: 79px;
+  min-height: 79px;
   position: relative;
   max-width: 1150px;
   margin: 0 auto;
@@ -13,7 +13,7 @@
   border-bottom: 1px solid $color-bg-title;
 
   @include viewport--md {
-    height: 89px;
+    min-height: 89px;
     justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
@@ -22,8 +22,8 @@
 
   @include viewport--lg {
     justify-content: space-between;
-    padding-left: 16px;
-    padding-right: 18px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -42,8 +42,13 @@
 .header__logo-link {
   text-decoration: none;
 
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    border-radius: 3px;
+  }
+
   @include viewport--lg {
-    margin-right: 62px;
+    margin-right: 57px;
   }
 }
 

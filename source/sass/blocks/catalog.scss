@@ -30,12 +30,26 @@
   @include viewport--lg {
     width: 316px;
     grid-template-columns: 1fr;
+    grid-auto-rows: 462px 198px;
   }
+}
+
+.catalog__card:hover .catalog__card-wrapper {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog__card:active .catalog__card-wrapper {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .catalog__link-photo {
   grid-column: 1/-1;
   justify-items: center;
+
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    border-radius: 3px;
+  }
 
   @include viewport--md {
     grid-column: 1/2;
@@ -81,6 +95,19 @@
 .catalog__link {
   grid-column: 1/-1;
   margin-bottom: 6px;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    border-radius: 3px;
+  }
 
   @include viewport--md {
     grid-row: 1/2;
@@ -138,9 +165,25 @@
 .catalog__in-basket {
   grid-column: 2/3;
 
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    border-radius: 3%;
+  }
+
   @include viewport--md {
     grid-row: 3/4;
     align-self: end;
     margin-bottom: 8px;
+    margin-right: -8px;
   }
+}
+
+.catalog__in-basket:hover svg {
+  color: $color-green;
+  opacity: 1;
+}
+
+.catalog__in-basket:active svg {
+  color: $color-green;
+  opacity: 0.3;
 }

@@ -4,9 +4,15 @@
   @include viewport--md {
     padding-bottom: 48px;
   }
+
+  @include viewport--lg {
+    padding-bottom: 55px;
+  }
 }
 
 .section-catalog__container {
+  padding-top: 31px;
+
   @include viewport--md {
     padding-top: 78px;
   }
@@ -22,16 +28,18 @@
   background-color: $color-bg-title;
 
   @include viewport--md {
-    background-image: url("../img/decor/zigzag-desktop.svg");
+    background-image: url("../img/decor/wave-tablet.svg");
     background-size: auto 24px;
-    background-position: bottom center;
+    background-position: bottom -11px center;
     background-repeat: repeat-x;
     padding-top: 100px;
     padding-bottom: 75px;
   }
 
   @include viewport--lg {
-    background-size: auto 34px;
+    background-image: url("../img/decor/wave-desktop.svg");
+    background-size: 1150px 34px;
+    background-position: bottom -17px center;
     padding-top: 105px;
     padding-bottom: 95px;
   }

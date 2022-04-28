@@ -11,7 +11,7 @@
   border: none;
 }
 
-.form-modal__tittle {
+.form-modal__group span {
   align-self: center;
   font-size: 15px;
   line-height: 2;
@@ -20,9 +20,13 @@
 }
 
 
-.form-modal__wrapper-input {
+.form-modal__wrapper-inputs {
   display: flex;
   margin-bottom: 24px;
+}
+
+.form-modal__box-input:not(:last-child) {
+  margin-right: 5px;
 }
 
 .form-modal__label {
@@ -45,11 +49,6 @@
   &:active {
     border: 2px $color-green solid;
   }
-
-}
-
-.form-modal__label:not(:last-child) {
-  margin-right: 5px;
 }
 
 .form-modal__radio {

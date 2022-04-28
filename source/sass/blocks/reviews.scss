@@ -26,12 +26,17 @@
 
   @include viewport--md {
     grid-template-columns: 1fr 1fr min-content;
-    background-image: url("../img/background-knitted-tablet.png");
+    background-image: url("../img/index/background-review-tablet.png");
     background-size: 350px 457px;
     background-position: left center;
     background-repeat: no-repeat;
     padding-top: 100px;
     padding-bottom: 42px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/background-review-tablet@2x.png");
+      background-size: 350px 457px;
+    }
   }
 
   @include viewport--lg {

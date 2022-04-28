@@ -3,6 +3,10 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.svg">
+  <link rel="manifest" href="manifest.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.css">
   <title>HTML Academy: Мишка</title>
@@ -15,12 +19,12 @@
     <div class="header__inner">
         <a href="index.html" class="header__logo-link">
           <picture>
-            <source srcset="img/mishka-logo-desktop.svg" media="(min-width:1150px)">
-            <source srcset="img/mishka-logo-tablet.svg" media="(min-width:768px)">
-            <img class="header__logo" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет магазина вязаных вещей мишка.">
+            <source srcset="img/logo/mishka-logo-desktop.svg" media="(min-width:1150px)">
+            <source srcset="img/logo/mishka-logo-tablet.svg" media="(min-width:768px)">
+            <img class="header__logo" src="img/logo/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет магазина вязаных вещей мишка.">
           </picture>
         </a>
-        <button class="header__toggle header__toggle--closed" type="button" id="toggle"></button> <!--header__toggle--closed-->
+        <button class="header__toggle header__toggle--closed" type="button" id="toggle"></button> <!--header__toggle--opened  header__toggle--no-js-->
         <div class="header__left-wrapper">
             <nav class="nav">
                 <ul class="nav__list">
@@ -57,9 +61,9 @@
           </nav>
         </div>
     </div>
-    <div class="header-sub">
+    <div class="header-sub header-sub--gray">
       <div class="header-sub__container header-sub__container--gray">
-        <ul class="header-sub__list header-sub--nojs"> <!--header-sub__list--open-->
+        <ul class="header-sub__list header-sub__list--closed"> <!--header-sub__list--opened header-sub--nojs-->
             <li class="header-sub__item item-hidden-desktop">
                 <a href="catalog.html" class="header-sub__link">Каталог товаров</a>
             </li>

@@ -1,22 +1,7 @@
 .intro {
   position: relative;
-  max-width: 1150px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fafafa;
-  background-image: url("../img/background-mobile.jpg");
-  background-size: 320px 373px;
-  background-position: center -15%;
-  background-repeat: no-repeat;
 
   @include viewport--md {
-    background-image: url("../img/background-desktop.jpg");
-    background-position: center -15%;
-    background-size: cover;
-    background-repeat: no-repeat;
-
     &::after {
       content: "";
       position: absolute;
@@ -28,12 +13,6 @@
   }
 
   @include viewport--lg {
-    background-color: #fafafa;
-    background-image: url("../img/background-desktop.jpg");
-    background-position: center bottom;
-    background-size: 767px 749px;
-    background-repeat: no-repeat;
-
     &::after {
       content: "";
       position: absolute;
@@ -45,17 +24,60 @@
   }
 }
 
+.intro__wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  background-image: url("../img/index/background-index-mobile.jpg");
+  background-size: 320px 373px;
+  background-position: center -15%;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/background-index-mobile@2x.jpg");
+    background-size: 320px 373px;
+  }
+
+  @include viewport--md {
+    background-image: url("../img/index/background-index-tablet.jpg");
+    background-position: center 101%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/background-index-tablet@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  @include viewport--lg {
+    background-color: #fafafa;
+    background-image: url("../img/index/background-index-desktop.jpg");
+    background-position: center bottom;
+    background-size: 1148px 749px;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/background-index-desktop@2x.jpg");
+      background-size: 1148px 749px;
+    }
+  }
+}
+
 .intro__title {
   width: 100%;
   text-align: center;
   padding: 73px 30px 120px;
 
   @include viewport--md {
-    padding: 155px 50px 372px;
+    padding: 94px 50px 372px;
   }
 
   @include viewport--lg {
-    padding: 157px 225px 355px;
+    padding: 100px 225px 355px;
   }
 }
 

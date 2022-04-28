@@ -3,6 +3,10 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.svg">
+  <link rel="manifest" href="manifest.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.css">
   <title>HTML Academy: Мишка</title>
@@ -15,12 +19,12 @@
     <div class="header__inner">
         <a href="#" class="header__logo-link">
           <picture>
-            <source srcset="img/mishka-logo-desktop.svg" media="(min-width:1150px)">
-            <source srcset="img/mishka-logo-tablet.svg" media="(min-width:768px)">
-            <img class="header__logo" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет магазина вязаных вещей мишка.">
+            <source srcset="img/logo/mishka-logo-desktop.svg" media="(min-width:1150px)">
+            <source srcset="img/logo/mishka-logo-tablet.svg" media="(min-width:768px)">
+            <img class="header__logo" src="img/logo/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет магазина вязаных вещей мишка.">
           </picture>
         </a>
-        <button class="header__toggle header__toggle--closed" type="button" id="toggle"></button> <!--header__toggle--closed-->
+        <button class="header__toggle header__toggle--closed" type="button" id="toggle"></button> <!--header__toggle--opened  header__toggle--no-js-->
         <div class="header__left-wrapper">
             <nav class="nav">
                 <ul class="nav__list">
@@ -59,7 +63,7 @@
     </div>
     <div class="header-sub">
       <div class="header-sub__container">
-        <ul class="header-sub__list header-sub__list--closed header-sub--nojs"> <!--header-sub__list--opened-->
+        <ul class="header-sub__list header-sub__list--closed"> <!--header-sub__list--opened header-sub--nojs-->
             <li class="header-sub__item item-hidden-desktop">
                 <a href="catalog.html" class="header-sub__link">Каталог товаров</a>
             </li>
@@ -99,7 +103,8 @@
     <h1 class="visually-hidden">Интернет магазин вязаных изделий Мишка.</h1>
 
     <section class="intro">
-      <h2 class="intro__title title ">Милые штуки ручной<br>работы для дома</h2>
+      <div class="intro__wrapper">
+      <h2 class="intro__title title">Милые штуки ручной<br>работы для дома</h2>
       <ul class="intro__list">
         <li class="intro__item">
           <a class="intro__link" href="#">
@@ -124,6 +129,7 @@
           </a>
         </li>
       </ul>
+    </div>
     </section>
 
     <section class="weekly-product">
@@ -145,11 +151,13 @@
           <th align="left" class="specifications__description">15 см</th>
         </tr>
       </table>
-      <picture class="weekly-product__photo-wrapper">
-        <source srcset="img/knitted-basket-desktop.jpg" media="(min-width:1150px)">
-        <source srcset="img/knitted-basket-tablet.jpg" media="(min-width:768px)">
-        <img class="weekly-product__photo" src="img/knitted-basket-mobile.jpg" width="260" height="315" alt="Вязанная корзинка цвета тиффани с серым.">
+      <div class="weekly-product__photo-wrapper">
+      <picture>
+        <source srcset="img/index/basket-desktop.png 1x, img/index/basket-desktop@2x.png 2x" media="(min-width:1150px)">
+        <source srcset="img/index/basket-tablet.png 1x, img/index/basket-tablet@2x.png 2x" media="(min-width:768px)">
+        <img class="weekly-product__photo" src="img/index/basket-mobile.png" srcset="img/index/basket-mobile@2x.png 2x" width="260" height="315" alt="Вязанная корзинка цвета тиффани с серым.">
       </picture>
+    </div>
       <span class="weekly-product__price">Цена: <span class="weekly-product__value">990 руб.</span></span>
       <a class="weekly-product__button button" href="form.html">Заказать</a>
     </div>
@@ -208,7 +216,13 @@
         </div>
       </address>
       </div>
-      <div class="contacts__map"></div>
+      <div class="contacts__map">
+        <picture>
+          <source media="(min-width:1150px)" srcset="img/index/map-desktop.png x1, img/index/map-desktop@2x.png 2x">
+          <source media="(min-width:768px)" srcset="img/index/map-tablet.png x1, img/index/map-tablet@2x.png 2x">
+          <img src="img/index/map-mobile.png" srcset="img/index/map-mobile@2x.png 2x" alt="Местоположение интерет магазина Мишка.">
+        </picture>
+      </div>
       <a href="#" class="contacts__button button">Напишите нам</a>
     </div>
     </section>
@@ -272,13 +286,19 @@
     <form class="form-modal" action="https://echo.htmlacademy.ru/" method="post">
       <fieldset class="form-modal__group">
         <span сlass="form-modal__tittle">Выберите размер:</span>
-        <div class="form-modal__wrapper-input">
-          <input class="form-modal__radio" id="modal-size-s" type="radio" name="product-size" value="s">
-          <label class="form-modal__label" for="modal-size-s">s</label>
-          <input class="form-modal__radio" id="modal-size-m" type="radio" name="product-size" value="m">
-          <label class="form-modal__label" for="modal-size-m">m</label>
-          <input class="form-modal__radio" id="modal-size-l" type="radio" name="product-size" value="l">
-          <label class="form-modal__label" for="modal-size-l">l</label>
+        <div class="form-modal__wrapper-inputs">
+          <div class="form-modal__box-input">
+            <input class="form-modal__radio" id="modal-size-s" type="radio" name="product-size" value="s">
+            <label class="form-modal__label" for="modal-size-s">s</label>
+          </div>
+          <div class="form-modal__box-input">
+            <input class="form-modal__radio" id="modal-size-m" type="radio" name="product-size" value="m">
+            <label class="form-modal__label" for="modal-size-m">m</label>
+          </div>
+          <div class="form-modal__box-input">
+            <input class="form-modal__radio" id="modal-size-l" type="radio" name="product-size" value="l">
+            <label class="form-modal__label" for="modal-size-l">l</label>
+          </div>
         </div>
         </fieldset>
         <input name="product_id" type="hidden">

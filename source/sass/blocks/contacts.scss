@@ -55,7 +55,6 @@
 
   @include viewport--lg {
     margin-bottom: 34px;
-
   }
 }
 
@@ -180,14 +179,12 @@
     justify-self: center;
     margin-left: 52px;
     margin-top: 8px;
-
   }
 }
 
 .contacts__map {
-  width: 100%;
+  margin: 0 auto;
   height: 454px;
-  background-color: greenyellow;
   margin-bottom: 45px;
 
   @include viewport--md {

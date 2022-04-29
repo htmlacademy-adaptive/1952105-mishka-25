@@ -29,18 +29,20 @@
 
   @include viewport--md {
     background-image: url("../img/decor/wave-tablet.svg");
+    background-position: bottom -12px center;
     background-size: auto 24px;
-    background-position: bottom -11px center;
     background-repeat: repeat-x;
-    padding-top: 100px;
+    background-position-x: -2px;
+    padding-top: 39px;
     padding-bottom: 75px;
   }
 
   @include viewport--lg {
     background-image: url("../img/decor/wave-desktop.svg");
-    background-size: 1150px 34px;
     background-position: bottom -17px center;
-    padding-top: 105px;
+    background-size: 1150px 37px;
+    background-position-x: -2px;
+    padding-top: 44px;
     padding-bottom: 95px;
   }
 }
@@ -48,4 +50,3 @@
 .section-catalog__title {
   text-align: center;
 }
-

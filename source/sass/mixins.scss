@@ -6,8 +6,6 @@
 
 @mixin input-hidden {
   position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -22,4 +20,3 @@
     @content;
   }
 }
-

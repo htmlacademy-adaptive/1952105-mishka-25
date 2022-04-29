@@ -3,6 +3,10 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.svg">
+  <link rel="manifest" href="manifest.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.css">
   <title>HTML Academy: Мишка</title>
@@ -15,12 +19,12 @@
     <div class="header__inner">
         <a href="index.html" class="header__logo-link">
           <picture>
-            <source srcset="img/mishka-logo-desktop.svg" media="(min-width:1150px)">
-            <source srcset="img/mishka-logo-tablet.svg" media="(min-width:768px)">
-            <img class="header__logo" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет магазина вязаных вещей мишка.">
+            <source srcset="img/logo/mishka-logo-desktop.svg" media="(min-width:1150px)">
+            <source srcset="img/logo/mishka-logo-tablet.svg" media="(min-width:768px)">
+            <img class="header__logo" src="img/logo/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет магазина вязаных вещей мишка.">
           </picture>
         </a>
-        <button class="header__toggle header__toggle--closed" type="button" id="toggle"></button> <!--header__toggle--closed-->
+        <button class="header__toggle header__toggle--closed" type="button" id="toggle"></button> <!--header__toggle--opened  header__toggle--no-js-->
         <div class="header__left-wrapper">
             <nav class="nav">
                 <ul class="nav__list">
@@ -57,9 +61,9 @@
           </nav>
         </div>
     </div>
-    <div class="header-sub">
+    <div class="header-sub header-sub--gray">
       <div class="header-sub__container header-sub__container--gray">
-        <ul class="header-sub__list header-sub--nojs"> <!--header-sub__list--open-->
+        <ul class="header-sub__list header-sub__list--closed"> <!--header-sub__list--opened header-sub--nojs-->
             <li class="header-sub__item item-hidden-desktop">
                 <a href="catalog.html" class="header-sub__link">Каталог товаров</a>
             </li>
@@ -106,9 +110,9 @@
         <li class="catalog__card product-card">
           <a href="#" class="catalog__link-photo">
             <picture>
-              <source srcset="img/hare-desktop.jpg" media="(min-width:1150px)">
-              <source srcset="img/hare-tablet.jpg" media="(min-width:768px)">
-              <img class="catalog__photo" src="img/hare-mobile.jpg" width="260" height="195" alt="Вязаный зайчик-попрыгайчик.">
+              <source srcset="img/catalog/hare-desktop.jpg 1x, img/catalog/hare-desktop@2x.jpg 2x" media="(min-width:1150px)">
+              <source srcset="img/catalog/hare-tablet.jpg 1x, img/catalog/hare-tablet@2x.jpg 2x" media="(min-width:768px)">
+              <img class="catalog__photo" src="img/catalog/hare-mobile.jpg" srcset="img/catalog/hare-mobile@2x.jpg 2x" width="260" height="195" alt="Вязаный зайчик-попрыгайчик.">
             </picture>
           </a>
           <div class="catalog__card-wrapper">
@@ -127,9 +131,9 @@
         <li class="catalog__card product-card">
           <a href="#" class="catalog__link-photo">
             <picture>
-              <source srcset="img/basket-desktop.jpg" media="(min-width:1150px)">
-              <source srcset="img/basket-tablet.jpg" media="(min-width:768px)">
-              <img class="catalog__photo"  src="img/basket-mobile.jpg" width="260" height="195" alt="Вязаная корзина для белья.">
+              <source srcset="img/catalog/basket-desktop.jpg 1x, img/catalog/basket-desktop@2x.jpg 2x" media="(min-width:1150px)">
+              <source srcset="img/catalog/basket-tablet.jpg 1x, img/catalog/basket-tablet@2x.jpg 2x" media="(min-width:768px)">
+              <img class="catalog__photo" src="img/catalog/basket-mobile.jpg" srcset="img/catalog/basket-mobile@2x.jpg 2x" width="260" height="195" alt="Вязаный зайчик-попрыгайчик.">
             </picture>
           </a>
           <div class="catalog__card-wrapper">
@@ -149,9 +153,9 @@
         <li class="catalog__card product-card">
           <a href="#" class="catalog__link-photo">
             <picture>
-              <source srcset="img/basket-toy-desktop.jpg" media="(min-width:1150px)">
-              <source srcset="img/basket-toy-tablet.jpg" media="(min-width:768px)">
-              <img class="catalog__photo" src="img/basket-toy-mobile.jpg" width="260" height="195" alt="Большая вязаная корзина для игрушек.">
+              <source srcset="img/catalog/basket-toy-desktop.jpg 1x, img/catalog/basket-toy-desktop@2x.jpg 2x" media="(min-width:1150px)">
+              <source srcset="img/catalog/basket-toy-tablet.jpg 1x, img/catalog/basket-toy-tablet@2x.jpg 2x" media="(min-width:768px)">
+              <img class="catalog__photo" src="img/catalog/basket-toy-mobile.jpg" srcset="img/catalog/basket-toy-mobile@2x.jpg 2x" width="260" height="195" alt="Вязаный зайчик-попрыгайчик.">
             </picture>
           </a>
           <div class="catalog__card-wrapper">
@@ -177,9 +181,9 @@
         <h3 class="video__title title title--h3">Процесс производства</h3>
       <div class="video__wrapper">
         <picture>
-          <source srcset="img/video-desktop.jpg" media="(min-width:1150px)">
-          <source srcset="img/video-tablet.jpg" media="(min-width:768px)">
-          <img class="catalog__video-photo" src="img/video-mobile.jpg" width="260" height="150" alt="Видео процесса производства наших изделий.">
+          <source srcset="img/catalog/video-desktop.jpg 1x, img/catalog/video-desktop@2x.jpg 2x" media="(min-width:768px)">
+          <source srcset="img/catalog/video-tablet.jpg 1x, img/catalog/video-tablet@2x.jpg 2x" media="(min-width:768px)">
+          <img class="catalog__video-photo" src="img/catalog/video-mobile.jpg" srcset="img/catalog/video-mobile@2x.jpg 2x" width="260" height="150" alt="Видео процесса производства наших изделий.">
         </picture>
         <button class="video__button" type="button" aria-label="Воспроизвести видео."></button>
       </div>
@@ -245,21 +249,23 @@
   <div class="modal-order__page">
     <div class="modal-order">
       <h2 class="modal-order__title title title--h2">Добавить в корзину</h2>
-      <form class="form-modal" action="#" method="post">
+      <form class="form-modal" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="form-modal__group">
-          <legend сlass="form-modal__legend">Выберите размер:</legend>
-            <label class="form-modal__label">
-              s
-              <input class="form-modal__radio" type="radio" name="product-size" value="s">
-            </label>
-            <label class="form-modal__label">
-             m
-              <input class="form-modal__radio" type="radio" name="product-size" value="m">
-            </label>
-            <label class="form-modal__label">
-              l
-              <input class="form-modal__radio" type="radio" name="product-size" value="l">
-            </label>
+          <span сlass="form-modal__tittle">Выберите размер:</span>
+          <div class="form-modal__wrapper-inputs">
+            <div class="form-modal__box-input">
+              <input class="form-modal__radio" id="modal-size-s" type="radio" name="product-size" value="s">
+              <label class="form-modal__label" for="modal-size-s">s</label>
+            </div>
+            <div class="form-modal__box-input">
+              <input class="form-modal__radio" id="modal-size-m" type="radio" name="product-size" value="m">
+              <label class="form-modal__label" for="modal-size-m">m</label>
+            </div>
+            <div class="form-modal__box-input">
+              <input class="form-modal__radio" id="modal-size-l" type="radio" name="product-size" value="l">
+              <label class="form-modal__label" for="modal-size-l">l</label>
+            </div>
+          </div>
           </fieldset>
           <input name="product_id" type="hidden">
           <button class="form-modal__button" type="submit" >Добавить</button>

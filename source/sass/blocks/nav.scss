@@ -6,10 +6,12 @@
   @include viewport--md {
     display: flex;
     flex-wrap: wrap;
+    max-width: 500px;
   }
 
   @include viewport--lg {
     display: flex;
+    max-width: 600px;
   }
 }
 
@@ -49,7 +51,7 @@
   opacity: 1;
 }
 
-.nav__link:active .nav__icon{
+.nav__link:active .nav__icon {
   color: $color-green;
   opacity: 0.3;
 }
@@ -148,5 +150,4 @@
   @include viewport--lg {
     display: block;
   }
-
 }

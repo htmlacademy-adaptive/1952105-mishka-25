@@ -11,7 +11,7 @@
   border: none;
 }
 
-.form-modal__tittle {
+.form-modal__group span {
   align-self: center;
   font-size: 15px;
   line-height: 2;
@@ -20,9 +20,13 @@
 }
 
 
-.form-modal__wrapper-input {
+.form-modal__wrapper-inputs {
   display: flex;
   margin-bottom: 24px;
+}
+
+.form-modal__box-input:not(:last-child) {
+  margin-right: 5px;
 }
 
 .form-modal__label {
@@ -47,16 +51,20 @@
   }
 }
 
-.form-modal__label:not(:last-child) {
-  margin-right: 5px;
-}
-
 .form-modal__radio {
   @include input-hidden;
 }
 
 .form-modal__radio:checked + .form-modal__label {
   border-color: $color-green;
+}
+
+.form-modal__radio:focus-visible + .form-modal__label {
+  outline: 2px solid $color-focus;
+}
+
+.form-modal__radio:disabled + .form-modal__label {
+  background-color: $color-light-grey;
 }
 
 .form-modal__button {
@@ -74,5 +82,9 @@
 
   &:hover {
     opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-focus;
   }
 }

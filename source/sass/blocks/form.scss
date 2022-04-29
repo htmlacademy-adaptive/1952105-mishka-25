@@ -2,7 +2,7 @@
   padding-bottom: 55px;
 
   @include viewport--md {
-     padding: 0;
+    padding: 0;
   }
 }
 
@@ -24,12 +24,6 @@
   }
 }
 
-.form-type {
-  @include viewport--md {
-    grid-column: 1/-1;
-  }
-}
-
 .fieldset {
   border: none;
   padding: 0;
@@ -40,8 +34,8 @@
   @include viewport--md {
     flex-direction: row;
     justify-content: start;
-}
   }
+}
 
 /* type ------------------------------------------*/
 
@@ -86,7 +80,7 @@
 
 .form-wrapper-color:nth-child(even) {
   @include viewport--md {
-  background-color: $color-bg-title;
+    background-color: $color-bg-title;
   }
 }
 
@@ -194,8 +188,14 @@
 }
 
 .form__label-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
   @include viewport--md {
     padding-bottom: 19px;
+    flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -246,6 +246,15 @@
 
 .input-container {
   position: relative;
+  width: 260px;
+
+  @include viewport--md {
+    width: 501px;
+  }
+
+  @include viewport--lg {
+    width: 700px;
+  }
 }
 
 .form-contacts {
@@ -365,20 +374,20 @@
   }
 }
 
-.form__input-contacts:hover+.form__icon-phone,
-.form__input-contacts:hover+.form__icon-email {
+.form__input-contacts:hover + .form__icon-phone,
+.form__input-contacts:hover + .form__icon-email {
   color: $color-green;
   opacity: 1;
 }
 
-.form__input-contacts:active+.form__icon-phone,
-.form__input-contacts:active+.form__icon-email {
+.form__input-contacts:active + .form__icon-phone,
+.form__input-contacts:active + .form__icon-email {
   color: $color-green;
   opacity: 1;
 }
 
-.form__input-contacts:focus-visible+.form__icon-phone,
-.form__input-contacts:focus-visible+.form__icon-email {
+.form__input-contacts:focus-visible + .form__icon-phone,
+.form__input-contacts:focus-visible + .form__icon-email {
   color: $color-green;
   opacity: 1;
 }
@@ -562,17 +571,6 @@
   @include input-hidden;
 }
 
-.form__label-text {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-
-  @include viewport--md {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
 //-----------------------------------------------------radio
 
 .form__radio-custom {
@@ -672,5 +670,3 @@
 .form__checkbox:focus-visible + .form__checkbox-custom {
   border: 4px solid $color-focus;
 }
-
-

@@ -60,6 +60,48 @@
     width: 148px;
     height: 71px;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--visible-mobile {
+    @include viewport--md {
+      display: none;
+    }
+
+    @include viewport--lg {
+      display: none;
+    }
+  }
+
+  &--visible-tablet {
+    display: none;
+
+    @include viewport--md {
+      display: block;
+    }
+
+    @include viewport--lg {
+      display: none;
+    }
+  }
+
+  &--visible-desktop {
+    display: none;
+
+    @include viewport--md {
+      display: none;
+    }
+
+    @include viewport--lg {
+      display: block;
+    }
+  }
 }
 
 .header__toggle {

@@ -5,14 +5,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid $color-light-grey;
+  padding-bottom: 14px;
+  border-bottom: 1px solid $color-bg-index;
 
   @include viewport--md {
     width: auto;
     border: none;
     padding: 0;
     justify-content: start;
+  }
+}
+
+.social__item:not(:last-child) {
+  @include viewport--md {
+    margin-right: 15px;
   }
 }
 
@@ -33,5 +39,12 @@
   &:focus-visible {
     outline: 2px solid $color-focus;
     border-radius: 3px;
+  }
+
+  @include viewport--md {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
   }
 }

@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" href="img/favicons/apple.svg">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
   <title>HTML Academy: Мишка</title>
 </head>
 
@@ -146,6 +146,9 @@
         <li class="catalog__card product-card">
           <a href="#" class="catalog__link-photo" aria-label="Перейти на страницу товара зайчик-попрыгайчик.">
             <picture>
+              <source srcset="img/catalog/hare-desktop.webp 1x, img/catalog/hare-desktop@2x.webp 2x" media="(min-width:1150px)">
+              <source srcset="img/catalog/hare-tablet.webp 1x, img/catalog/hare-tablet@2x.webp 2x" media="(min-width:768px)">
+              <source srcset="img/catalog/hare-mobile.webp 1x, img/catalog/hare-mobile@2x.webp 2x">
               <source srcset="img/catalog/hare-desktop.jpg 1x, img/catalog/hare-desktop@2x.jpg 2x" media="(min-width:1150px)">
               <source srcset="img/catalog/hare-tablet.jpg 1x, img/catalog/hare-tablet@2x.jpg 2x" media="(min-width:768px)">
               <img class="catalog__photo" src="img/catalog/hare-mobile.jpg" srcset="img/catalog/hare-mobile@2x.jpg 2x" width="260" height="195" alt="Вязаный зайчик-попрыгайчик.">
@@ -167,6 +170,9 @@
         <li class="catalog__card product-card">
           <a href="#" class="catalog__link-photo" aria-label="Перейти на страницу товара корзинка для белья.">
             <picture>
+              <source srcset="img/catalog/basket-desktop.webp 1x, img/catalog/basket-desktop@2x.webp 2x" media="(min-width:1150px)">
+              <source srcset="img/catalog/basket-tablet.webp 1x, img/catalog/basket-tablet@2x.webp 2x" media="(min-width:768px)">
+              <source srcset="img/catalog/basket-mobile.webp 1x, img/catalog/basket-mobile@2x.webp 2x">
               <source srcset="img/catalog/basket-desktop.jpg 1x, img/catalog/basket-desktop@2x.jpg 2x" media="(min-width:1150px)">
               <source srcset="img/catalog/basket-tablet.jpg 1x, img/catalog/basket-tablet@2x.jpg 2x" media="(min-width:768px)">
               <img class="catalog__photo" src="img/catalog/basket-mobile.jpg" srcset="img/catalog/basket-mobile@2x.jpg 2x" width="260" height="195" alt="Вязаный зайчик-попрыгайчик.">
@@ -189,6 +195,9 @@
         <li class="catalog__card product-card">
           <a href="#" class="catalog__link-photo" aria-label="Перейти на страницу товара большая корзинка для игрушек.">
             <picture>
+              <source srcset="img/catalog/basket-toy-desktop.webp 1x, img/catalog/basket-toy-desktop@2x.webp 2x" media="(min-width:1150px)">
+              <source srcset="img/catalog/basket-toy-tablet.webp 1x, img/catalog/basket-toy-tablet@2x.webp 2x" media="(min-width:768px)">
+              <source srcset="img/catalog/basket-toy-mobile.webp 1x, img/catalog/basket-toy-mobile@2x.webp 2x">
               <source srcset="img/catalog/basket-toy-desktop.jpg 1x, img/catalog/basket-toy-desktop@2x.jpg 2x" media="(min-width:1150px)">
               <source srcset="img/catalog/basket-toy-tablet.jpg 1x, img/catalog/basket-toy-tablet@2x.jpg 2x" media="(min-width:768px)">
               <img class="catalog__photo" src="img/catalog/basket-toy-mobile.jpg" srcset="img/catalog/basket-toy-mobile@2x.jpg 2x" width="260" height="195" alt="Вязаный зайчик-попрыгайчик.">
@@ -217,6 +226,9 @@
         <h3 class="video__title title title--h3">Процесс производства</h3>
       <div class="video__wrapper">
         <picture>
+          <source srcset="img/catalog/video-desktop.webp 1x, img/catalog/video-desktop@2x.webp 2x" media="(min-width:768px)">
+          <source srcset="img/catalog/video-tablet.webp 1x, img/catalog/video-tablet@2x.jpg 2x" media="(min-width:768px)">
+          <source srcset="img/catalog/video-mobile.webp 1x, img/catalog/video-mobile@2x.webp 2x">
           <source srcset="img/catalog/video-desktop.jpg 1x, img/catalog/video-desktop@2x.jpg 2x" media="(min-width:768px)">
           <source srcset="img/catalog/video-tablet.jpg 1x, img/catalog/video-tablet@2x.jpg 2x" media="(min-width:768px)">
           <img class="catalog__video-photo" src="img/catalog/video-mobile.jpg" srcset="img/catalog/video-mobile@2x.jpg 2x" width="260" height="150" alt="Видео процесса производства наших изделий.">

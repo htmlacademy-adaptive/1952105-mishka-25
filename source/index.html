@@ -8,13 +8,13 @@
   <link rel="apple-touch-icon" href="img/favicons/apple.svg">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
   <title>HTML Academy: Мишка</title>
 </head>
 
 <body class="body__index">
 
-  <header class="header">
+  <header class="header header--close"> <!--header--opened-->
 
     <div class="header__inner">
         <a href="#" class="header__logo-link">
@@ -109,7 +109,7 @@
             <li class="header-sub__item item-hidden-tablet item-hidden-desktop">
               <a href="#" class="header-sub__link">
                 <svg class="nav__icon" width="18" height="18" opacity="0.2" viewBox="0 0 18 18" fill="currentColor">
-                  <use href="#icon-search"></use>
+                  <use href="./img/sprite.svg#icon-search"></use>
                 </svg>
                 <span>Поиск по сайту</span>
               </a>
@@ -117,7 +117,7 @@
               <li class="header-sub__item item-hidden-tablet item-hidden-desktop">
                 <a href="#" class="header-sub__link">
                   <svg class="nav__icon" width="21" height="18" opacity="0.2" viewBox="0 0 21 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <use href="#icon-basket"></use>
+                    <use href="./img/sprite.svg#icon-basket"></use>
                   </svg>
                     Корзина:
                   <span>пока пуста</span>
@@ -257,6 +257,9 @@
       </div>
       <div class="contacts__map">
         <picture>
+          <source media="(min-width:1150px)" srcset="img/index/map-desktop.webp x1, img/index/map-desktop@2x.webp 2x">
+          <source media="(min-width:768px)" srcset="img/index/map-tablet.webp x1, img/index/map-tablet@2x.webp 2x">
+          <source srcset="img/index/map-mobile.webp x1, img/index/map-mobile@2x.webp 2x">
           <source media="(min-width:1150px)" srcset="img/index/map-desktop.png x1, img/index/map-desktop@2x.png 2x">
           <source media="(min-width:768px)" srcset="img/index/map-tablet.png x1, img/index/map-tablet@2x.png 2x">
           <img src="img/index/map-mobile.png" srcset="img/index/map-mobile@2x.png 2x" alt="Местоположение интерет магазина Мишка.">

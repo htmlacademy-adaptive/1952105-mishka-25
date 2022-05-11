@@ -21,13 +21,14 @@
 
 .footer__logo-link {
   display: none;
+  color: $color-title;
 
   &:hover {
-    fill: $color-green;
+    color: $color-green;
   }
 
   &:active {
-    fill: $color-green;
+    color: $color-green;
     opacity: 0.6;
   }
 

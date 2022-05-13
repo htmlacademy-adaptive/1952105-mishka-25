@@ -1,3 +1,12 @@
-let headerToggle = document.querySelector('.header__toggle');
+const menuToggle = () => {
+  const header = document.querySelector('.header');
+  const headerButton = document.querySelector('.header__toggle');
 
-headerToggle.classList.toggle('header__toggle--opened');
+  header.classList.remove('header--no--js')
+
+  headerButton.addEventListener('click', () => {
+    haeder.classList.toggle('.menu--opened');
+  })
+}
+
+menuToggle();

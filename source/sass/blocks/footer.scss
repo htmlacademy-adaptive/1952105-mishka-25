@@ -1,6 +1,6 @@
 .footer {
   background-color: $color-bg-title;
-  padding-top: 27px;
+  padding-top: 19px;
 
   @include viewport--md {
     padding-top: 33px;
@@ -16,18 +16,20 @@
   @include viewport--md {
     flex-direction: row;
     justify-content: space-between;
+    padding-right: 45px;
   }
 }
 
 .footer__logo-link {
   display: none;
+  color: $color-title;
 
   &:hover {
-    fill: $color-green;
+    color: $color-green;
   }
 
   &:active {
-    fill: $color-green;
+    color: $color-green;
     opacity: 0.6;
   }
 
@@ -38,6 +40,7 @@
 
   @include viewport--md {
     display: block;
+    margin-right: 5px;
   }
 }
 
@@ -71,5 +74,13 @@
   &:focus-visible {
     outline: 2px solid $color-focus;
     border-radius: 3px;
+  }
+
+  @include viewport--md {
+    margin-left: 21px;
+  }
+
+  @include viewport--lg {
+    margin-left: 27px;
   }
 }

@@ -6,7 +6,7 @@
   margin: 0 auto;
 
   @include viewport--md {
-    row-gap: 54px;
+    row-gap: 52px;
   }
 
   @include viewport--lg {
@@ -76,7 +76,7 @@
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: 1fr min-content;
-  padding: 30px 27px 24px;
+  padding: 29px 27px 25px;
 
   @include viewport--md {
     grid-column: 2/3;
@@ -120,7 +120,10 @@
 
 .catalog__title {
   margin: 0;
-  margin-bottom: 1px;
+
+  @include viewport--md {
+    margin-bottom: 3px;
+  }
 }
 
 .catalog__discription {
@@ -140,6 +143,18 @@
 
 .catalog__price {
   grid-column: 1/2;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 204px;
+    height: 1px;
+    background-color: $color-bg-title;
+    display: block;
+    margin: 0 auto;
+    bottom: 47px;
+  }
 
   @include viewport--md {
     font-size: 17px;
@@ -156,13 +171,15 @@
       background-color: $color-bg-title;
       display: block;
       margin: 0 auto;
-      bottom: 53px;
+      bottom: 49px;
     }
   }
 }
 
 .catalog__in-basket {
   grid-column: 2/3;
+  padding: 0;
+  margin-top: -8px;
 
   &:focus-visible {
     outline: 2px solid $color-focus;

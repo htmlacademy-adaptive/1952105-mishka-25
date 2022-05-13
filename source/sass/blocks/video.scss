@@ -1,12 +1,12 @@
 .video {
-  padding-bottom: 55px;
+  padding-bottom: 58px;
 
   @include viewport--md {
-    padding-bottom: 75px;
+    padding-bottom: 77px;
   }
 
   @include viewport--lg {
-    padding-bottom: 105px;
+    padding-bottom: 108px;
   }
 }
 
@@ -44,7 +44,7 @@
   background-position: left 30px center;
   background-size: 32px 22px;
   background-repeat: no-repeat;
-  margin-bottom: 26px;
+  margin-bottom: 29px;
   padding-left: 90px;
   justify-self: end;
 

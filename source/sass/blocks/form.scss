@@ -201,6 +201,7 @@
 
 .form__input-text {
   font-size: 17px;
+  font-family: $main-font;
   line-height: 1.05;
   margin-bottom: 21px;
   border: none;
@@ -229,6 +230,7 @@
 
   @include viewport--lg {
     width: 573px;
+    padding-left: 15px;
   }
 }
 
@@ -344,6 +346,7 @@
   color: rgba(0, 0, 0, 0.3);
   padding-top: 7px;
   background-color: transparent;
+  font-family: $main-font;
 
   &:hover {
     border-color: $color-green;
@@ -372,6 +375,10 @@
   @include viewport--lg {
     width: 700px;
   }
+}
+
+.form__input-contacts--phone {
+  padding-bottom: 13px;
 }
 
 .form__input-contacts:hover + .form__icon-phone,
@@ -473,6 +480,7 @@
   font-size: 17px;
   line-height: 1.05;
   color: rgba(0, 0, 0, 0.3);
+  font-family: $main-font;
   padding-top: 17px;
   padding-left: 17px;
   margin-bottom: 17px;
@@ -526,6 +534,7 @@
   width: 260px;
   height: 52px;
   padding: 18px 37px;
+  font-size: 17px;
 
   @include viewport--md {
     grid-column: 1/2;

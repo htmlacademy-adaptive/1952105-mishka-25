@@ -7,10 +7,14 @@
   justify-content: center;
   padding-bottom: 14px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   border-bottom: 1px solid $color-bg-index;
 =======
   border-bottom: 1px solid $color-border;
 >>>>>>> 9bea476 (fix: pp)
+=======
+  border-bottom: 1px solid $color-border;
+>>>>>>> 9bea476a1ec71d153188b9ded21d9c187a1faab9
 
   @include viewport--md {
     width: auto;

@@ -1,5 +1,4 @@
 .modal-order__page {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -7,6 +6,14 @@
   left: 0;
   background: rgba(242, 242, 242, 0.8);
   z-index: 9001;
+
+  &--cloused {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
 }
 
 .modal-order {
@@ -27,6 +34,7 @@
 
   @include viewport--md {
     max-width: 566px;
+    padding-top: 39px;
   }
 }
 
@@ -38,4 +46,11 @@
   text-transform: uppercase;
   justify-self: start;
   margin-left: 10px;
+
+  @include viewport--md {
+    font-size: 30px;
+    line-height: 1.9;
+    width: 358px;
+    margin-bottom: 6px;
+  }
 }

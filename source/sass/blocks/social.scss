@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 14px;
-  border-bottom: 1px solid $color-bg-index;
+  border-bottom: 1px solid $color-border;
 
   @include viewport--md {
     width: auto;

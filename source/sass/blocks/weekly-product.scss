@@ -1,6 +1,6 @@
 .weekly-product {
   padding-top: 31px;
-  padding-bottom: 44px;
+  padding-bottom: 41px;
   background-image: url("../img/decor/zigzag-line.svg");
   background-position: bottom center;
   background-size: auto 6px;
@@ -133,7 +133,11 @@
   width: 37%;
 
   @include viewport--md {
-    width: 33%;
+    width: 37.47%;
+  }
+
+  @include viewport--md {
+    width: 32.47%;
   }
 }
 
@@ -141,7 +145,11 @@
   width: 63%;
 
   @include viewport--md {
-    width: 67%;
+    width: 63.53%;
+  }
+
+  @include viewport--md {
+    width: 68.53%;
   }
 }
 

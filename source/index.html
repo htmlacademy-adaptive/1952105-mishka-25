@@ -9,6 +9,10 @@
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensans.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff" type="font/woff" as="font" crossorigin="anonymous">
   <title>HTML Academy: Мишка</title>
 </head>
 
@@ -99,7 +103,7 @@
     </div>
     <div class="header-sub">
       <div class="header-sub__container">
-        <ul class="header-sub__list header-sub__list--closed"> <!--header-sub__list--opened header-sub--nojs-->
+        <ul class="header-sub__list header-sub__list--no"> <!--header-sub__list--opened header-sub--nojs header-sub__list--closed-->
             <li class="header-sub__item item-hidden-desktop">
                 <a href="catalog.html" class="header-sub__link">Каталог товаров</a>
             </li>
@@ -108,7 +112,7 @@
             </li>
             <li class="header-sub__item item-hidden-tablet item-hidden-desktop">
               <a href="#" class="header-sub__link">
-                <svg class="nav__icon" width="18" height="18" opacity="0.2" viewBox="0 0 18 18" fill="currentColor">
+                <svg class="header-sub__icon" width="18" height="18" opacity="0.2" viewBox="0 0 18 18" fill="currentColor">
                   <use href="./img/sprite.svg#icon-search"></use>
                 </svg>
                 <span>Поиск по сайту</span>
@@ -116,7 +120,7 @@
             </li>
               <li class="header-sub__item item-hidden-tablet item-hidden-desktop">
                 <a href="#" class="header-sub__link">
-                  <svg class="nav__icon" width="21" height="18" opacity="0.2" viewBox="0 0 21 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="header-sub__icon" width="21" height="18" opacity="0.2" viewBox="0 0 21 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <use href="./img/sprite.svg#icon-basket"></use>
                   </svg>
                     Корзина:
@@ -198,7 +202,7 @@
       </picture>
     </div>
       <span class="weekly-product__price">Цена: <span class="weekly-product__value">990 руб.</span></span>
-      <a class="weekly-product__button button" href="form.html">Заказать</a>
+      <a class="weekly-product__button button" href="#">Заказать</a>
     </div>
     </section>
 
@@ -235,7 +239,7 @@
         <button type="button" aria-label="Предыдущий отзыв." class="reviews__button-previous"></button>
         <button type="button" aria-label="Следующий отзыв." class="reviews__button-next"></button>
       </div>
-      <a class="reviews__write button" href="#" >Написать</a>
+      <a class="reviews__write button" href="#">Написать</a>
       </div>
     </section>
 
@@ -315,7 +319,7 @@
   </footer>
 
   <!--Модальное при заказе-->
-  <div class="modal-order__page">
+  <div class="modal-order__page modal-order__page--cloused"> <!--modal-order__page--opened-->
   <div class="modal-order">
     <h2 class="modal-order__title title title--h2">Добавить в корзину</h2>
     <form class="form-modal" action="https://echo.htmlacademy.ru/" method="post">
@@ -343,3 +347,18 @@
 </div>
 </body>
 </html>
+
+<script>
+  const menuToggle = () => {
+    const header = document.querySelector('.header');
+    const headerButton = document.querySelector('.header__toggle');
+
+    header.classList.remove('header--nojs')
+
+    headerButton.addEventListener('click', () => {
+      header.classList.toggle('.header--opened');
+    })
+  }
+
+  menuToggle();
+</script>

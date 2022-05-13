@@ -100,7 +100,11 @@
   font-size: 17px;
   line-height: 1.41;
   color: $color-title;
+<<<<<<< HEAD
   margin-bottom: 5px;
+=======
+  padding-bottom: 3px;
+>>>>>>> 9bea476 (fix: pp)
 
   @include viewport--md {
     font-size: 18px;
@@ -111,6 +115,7 @@
   @include viewport--lg {
     font-size: 17px;
     line-height: 1.41;
+    margin-bottom: 0;
   }
 }
 

@@ -9,6 +9,8 @@
   flex-direction: column;
   justify-content: center;
   border: none;
+  padding: 0;
+  margin-bottom: 6px;
 }
 
 .form-modal__group span {
@@ -16,7 +18,7 @@
   font-size: 15px;
   line-height: 2;
   color: $color-text;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 
   @include viewport--md {
     font-size: 17px;

@@ -6,7 +6,11 @@
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 14px;
+<<<<<<< HEAD
   border-bottom: 1px solid $color-bg-index;
+=======
+  border-bottom: 1px solid $color-border;
+>>>>>>> 9bea476 (fix: pp)
 
   @include viewport--md {
     width: auto;

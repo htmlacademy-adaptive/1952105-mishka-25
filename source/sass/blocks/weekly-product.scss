@@ -1,6 +1,10 @@
 .weekly-product {
   padding-top: 31px;
+<<<<<<< HEAD
   padding-bottom: 44px;
+=======
+  padding-bottom: 41px;
+>>>>>>> 9bea476 (fix: pp)
   background-image: url("../img/decor/zigzag-line.svg");
   background-position: bottom center;
   background-size: auto 6px;
@@ -130,18 +134,32 @@
 }
 
 .specifications__element {
+<<<<<<< HEAD
   width: 37%;
 
   @include viewport--md {
     width: 33%;
+=======
+  width: 37.47%;
+
+  @include viewport--md {
+    width: 32.47%;
+>>>>>>> 9bea476 (fix: pp)
   }
 }
 
 .specifications__description {
+<<<<<<< HEAD
   width: 63%;
 
   @include viewport--md {
     width: 67%;
+=======
+  width: 63.53%;
+
+  @include viewport--md {
+    width: 68.53%;
+>>>>>>> 9bea476 (fix: pp)
   }
 }
 

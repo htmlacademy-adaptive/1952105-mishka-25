@@ -30,8 +30,8 @@
     background-size: 350px 457px;
     background-position: left center;
     background-repeat: no-repeat;
-    padding-top: 94px;
-    padding-bottom: 42px;
+    padding-top: 102px;
+    padding-bottom: 37px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/index/background-review-tablet@2x.png");
@@ -80,7 +80,8 @@
   font-size: 15px;
   line-height: 2;
   color: $color-text;
-  margin-bottom: 36px;
+  margin: 0;
+  margin-bottom: 35px;
 
   @include viewport--md {
     font-size: 17px;
@@ -105,7 +106,6 @@
   @include viewport--md {
     font-size: 18px;
     line-height: 1.33;
-    margin-bottom: 4px;
   }
 
   @include viewport--lg {
@@ -133,7 +133,7 @@
     z-index: 1;
     align-self: end;
     justify-self: end;
-    margin-bottom: 31px;
+    margin-bottom: 33px;
   }
 
   @include viewport--lg {

@@ -49,6 +49,18 @@
     display: none;
   }
 
+  &--opened {
+    display: block;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+  }
+
+  &--nojs {
+    display: block;
+    z-index: 0;
+  }
+
   @include viewport--md {
     display: flex;
     flex-direction: row;
@@ -57,20 +69,6 @@
     background-color: transparent;
     margin: 0;
   }
-}
-
-/*
-.header--nojs {
-  display: block;
-  z-index: 0;
-}
-*/
-
-.header--opened .header-sub__list--opened {
-  display: block;
-  width: 100%;
-  position: absolute;
-  z-index: 100;
 }
 
 .header-sub__item {

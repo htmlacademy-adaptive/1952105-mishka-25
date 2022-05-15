@@ -12,6 +12,31 @@
   }
 }
 
+.form-order__wrapper {
+  padding-top: 73px;
+  padding-bottom: 73px;
+  background-color: $color-bg-title;
+
+  @include viewport--md {
+    background-image: url("../img/decor/wave-tablet.svg");
+    background-position: bottom -12px center;
+    background-size: auto 24px;
+    background-repeat: repeat-x;
+    background-position-x: -2px;
+    padding-top: 39px;
+    padding-bottom: 75px;
+  }
+
+  @include viewport--lg {
+    background-image: url("../img/decor/wave-desktop.svg");
+    background-position: bottom -17px center;
+    background-size: 1150px 37px;
+    background-position-x: -2px;
+    padding-top: 44px;
+    padding-bottom: 95px;
+  }
+}
+
 .form-order__title {
   background-color: $color-bg-title;
   text-align: center;

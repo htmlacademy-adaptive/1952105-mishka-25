@@ -115,12 +115,12 @@
   }
 }
 
-.specifications__line {
+.weekly-product__specifications-line {
   border-bottom: 1px solid $color-light-grey;
 }
 
-.specifications__element,
-.specifications__description {
+.weekly-product__specifications-element,
+.weekly-product__specifications-description {
   font-weight: 400;
   font-size: 15px;
   line-height: 1.33;
@@ -130,7 +130,7 @@
   text-align: left;
 }
 
-.specifications__element {
+.weekly-product__specifications-element {
   width: 37%;
 
   @include viewport--md {
@@ -142,7 +142,7 @@
   }
 }
 
-.specifications__description {
+.weekly-product__specifications-description {
   width: 63%;
 
   @include viewport--md {

@@ -46,7 +46,7 @@
   flex-direction: column;
 
   &--closed {
-    display: none;
+    display: block;
   }
 
   &--opened {

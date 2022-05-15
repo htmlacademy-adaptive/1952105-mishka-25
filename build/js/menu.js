@@ -1,1 +1,0 @@
-const menuToggle=()=>{const e=document.querySelector(".header"),o=document.querySelector(".header__toggle");e.classList.remove("header--no--js"),o.addEventListener("click",(()=>{haeder.classList.toggle(".menu--opened")}))};menuToggle();

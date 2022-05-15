@@ -13,8 +13,8 @@
   background-color: $color-white;
 
   @include viewport--md {
-    padding-top: 68px;
-    padding-bottom: 56px;
+    padding-top: 71px;
+    padding-bottom: 58px;
     background-image: url("../img/decor/flag.svg");
     background-position: top 44px right 53px;
     background-size: 47px 81px;
@@ -47,7 +47,7 @@
 }
 
 .contacts__title {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   @include viewport--md {
     margin-bottom: 48px;

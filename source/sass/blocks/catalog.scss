@@ -166,7 +166,7 @@
     &::before {
       content: "";
       position: absolute;
-      width: 268px;
+      width: 256px;
       height: 1px;
       background-color: $color-bg-title;
       display: block;
@@ -190,7 +190,11 @@
     grid-row: 3/4;
     align-self: end;
     margin-bottom: 8px;
+  }
+
+  @include viewport--lg {
     margin-right: -8px;
+    margin-bottom: 4px;
   }
 }
 
